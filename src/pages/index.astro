@@ -1,26 +1,52 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <title>Dawner Creative</title>
-  </head>
-  <body>
+<BaseLayout>
+  <section>
     <h1>Website design and development</h1>
-  </body>
-</html>
+    <p
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, omnis
+      veniam. Totam odit adipisci molestias iure consequuntur veritatis numquam
+      commodi at mollitia. Totam possimus atque enim sapiente a pariatur
+      nesciunt.</p
+    >
+  </section>
+  <section>
+    <p
+      >At Dawner Creative, we offer a comphrehensive suite of website design and
+      development services to bring your digital vision to life. Our team is
+      committed to delivering bespoke solutions tailored to each clients unique
+      needs.
+    </p>
+  </section>
+  <section>
+    <h2>Services we offer</h2>
+    <h4>Wesbite Design:</h4>
+    <p
+      >We craft visually stunning and user-friendly websites. Our design
+      approach focuses on creating a seamless user experience that aligns with
+      your brand identity and engages your audience.
+    </p>
+    <h4>Website Development:</h4>
+    <p
+      >Beyond aesthetics, we build robust, high-functioning websites. Our
+      developer utilises the latest technologies to ensure your website is fast,
+      secure and scalable.
+    </p>
+    <h4>E-Commerce Solutions:</h4>
+    <p
+      >We develop e-commerce platforms that are not only visually appealing but
+      also intuitive, secure and optimised for sales conversions.
+    </p>
+    <h4>Responsive Web Design:</h4>
+    <p
+      >With a mobile-first approach, we ensure your website looks great and
+      functions flawlessly across all devices, from desktop to mobile.
+    </p>
+  </section>
+  <section>
+    <h3>See DAWNER CREATIVE results for yourself</h3>
+  </section>
+</BaseLayout>
