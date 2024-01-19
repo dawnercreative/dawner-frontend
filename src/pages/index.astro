@@ -4,16 +4,26 @@ import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <section>
-    <h1>Website design and development</h1>
-    <p
-      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, omnis
-      veniam. Totam odit adipisci molestias iure consequuntur veritatis numquam
-      commodi at mollitia. Totam possimus atque enim sapiente a pariatur
-      nesciunt.</p
-    >
-  </section>
-  <section>
+  <div class="banner-container">
+    <div class="text-container">
+      <h1>Website design & development</h1>
+      <p>
+        Based on the Sunshine Coast, our team are experienced in website design
+        and development. We craft tailored web solutions for your unique vision</p
+      >
+    </div>
+    <img
+      class="home-banner-image"
+      src="/images/banner-image.png"
+      alt="abstract purple image"
+    />
+    <!-- <img
+      class="home-banner-image-2"
+      src="/images/banner-image-2.png"
+      alt="abstract purple image"
+    /> -->
+  </div>
+  <section class="page-description">
     <p
       >At Dawner Creative, we offer a comphrehensive suite of website design and
       development services to bring your digital vision to life. Our team is
@@ -21,7 +31,8 @@ import '../styles/global.css';
       needs.
     </p>
   </section>
-  <section>
+
+  <!-- <section>
     <h2>Services we offer</h2>
     <h4>Wesbite Design:</h4>
     <p
@@ -48,5 +59,55 @@ import '../styles/global.css';
   </section>
   <section>
     <h3>See DAWNER CREATIVE results for yourself</h3>
-  </section>
+  </section> -->
 </BaseLayout>
+
+<style>
+  .banner-container {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding-left: 10rem;
+    height: 50rem;
+    align-items: center;
+  }
+  h1 {
+    /* flex: 2; */
+    color: white;
+  }
+
+  p {
+    /* flex: 2; */
+    line-height: 2;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .home-banner-image {
+    height: 50rem;
+    top: 0;
+    z-index: 1;
+  }
+
+  .page-description {
+    /* background-color: white; */
+    height: 100vh;
+  }
+  .page-description p {
+    font-family: 'Work Sans', sans-serif;
+    color: #58595a;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  section {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  /* other styles */
+</style>

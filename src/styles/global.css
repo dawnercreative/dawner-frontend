@@ -49,17 +49,36 @@ html {
   
   nav a {
     text-decoration: none;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
     margin-left: 4rem;
 } 
 
 /* Typography */
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-family: 'Work Sans', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 125%;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  a {
+    color: white;
+font-family: 'Work Sans', sans-serif;
+font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 150%;
   }
 
 /* Buttons */
@@ -93,7 +112,11 @@ h1 {
       }
     
       h1 {
-        font-size: 5rem;
+        font-size: 5.6rem;
+      }
+
+      h2 {
+        font-size: 3.75rem;
       }
     
        .top-nav-links {
