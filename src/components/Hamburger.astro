@@ -1,0 +1,41 @@
+---
+
+---
+
+<div class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+<!-- <script is:inline>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.top-nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('expanded');
+      hamburger.classList.toggle('hidden');
+    });
+  });
+</script> -->
+
+<style>
+  .hamburger {
+    padding-right: 2rem;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    margin-bottom: 0.6rem;
+    background-color: white;
+    border-radius: 0.2rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
