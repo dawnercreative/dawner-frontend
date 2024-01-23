@@ -2,28 +2,89 @@
 
 ---
 
-<section>
-  <h2>Services we offer</h2>
-  <h4>Wesbite Design:</h4>
-  <p
-    >We craft visually stunning and user-friendly websites. Our design approach
-    focuses on creating a seamless user experience that aligns with your brand
-    identity and engages your audience.
-  </p>
-  <h4>Website Development:</h4>
-  <p
-    >Beyond aesthetics, we build robust, high-functioning websites. Our
-    developer utilises the latest technologies to ensure your website is fast,
-    secure and scalable.
-  </p>
-  <h4>E-Commerce Solutions:</h4>
-  <p
-    >We develop e-commerce platforms that are not only visually appealing but
-    also intuitive, secure and optimised for sales conversions.
-  </p>
-  <h4>Responsive Web Design:</h4>
-  <p
-    >With a mobile-first approach, we ensure your website looks great and
-    functions flawlessly across all devices, from desktop to mobile.
-  </p>
+<section class="services-on-offer">
+  <div class="services-title-left">
+    <h2>Services we offer</h2>
+  </div>
+  <div class="services-right">
+    <div class="service">
+      <img
+        src="./images/icon-1.svg"
+        alt="abstract icon 1"
+      />
+      <h4>Website Design:</h4>
+      <p
+        >We craft visually stunning and user-friendly websites. Our design
+        approach focuses on creating a seamless user experience that aligns with
+        your brand identity and engages your audience.
+      </p>
+    </div>
+    <div class="service">
+      <img
+        src="./images/icon-2.svg"
+        alt="abstract icon 2"
+      />
+      <h4>Website Development:</h4>
+      <p
+        >Beyond aesthetics, we build robust, high-functioning websites. Our
+        developer utilises the latest technologies to ensure your website is
+        fast, secure and scalable.
+      </p>
+    </div>
+    <div class="service">
+      <img
+        src="./images/icon-3.svg"
+        alt="abstract icon 3"
+      />
+      <h4>E-Commerce Solutions:</h4>
+      <p
+        >We develop e-commerce platforms that are not only visually appealing
+        but also intuitive, secure and optimised for sales conversions.
+      </p>
+    </div>
+    <div class="service">
+      <img
+        src="./images/icon-4.svg"
+        alt="abstract icon 4"
+      />
+      <h4>Responsive Web Design:</h4>
+      <p
+        >With a mobile-first approach, we ensure your website looks great and
+        functions flawlessly across all devices, from desktop to mobile.
+      </p>
+    </div>
+  </div>
 </section>
+
+<style>
+  h4 {
+    font-family: var(--primary-font);
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .service p {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.35rem;
+  }
+
+  .services-on-offer {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8rem;
+  }
+
+  .services-title-left {
+    width: 25%;
+  }
+
+  .services-right {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 5rem;
+  }
+</style>

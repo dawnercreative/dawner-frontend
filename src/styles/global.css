@@ -42,8 +42,9 @@ h1 {
 
   h2 {
     font-family: var(--primary-font);
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
   }
 
   p {
@@ -72,10 +73,6 @@ h1 {
 
       h1 {
         font-size: 5rem;
-      }
-
-      h2 {
-        font-size: 3.75rem;
       }
     
       nav a {
