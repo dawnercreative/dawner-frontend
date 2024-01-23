@@ -1,14 +1,69 @@
 ---
-
+import ContactButton from './ContactButton.astro';
 ---
 
 <div class="top-nav-links">
   <a href="/about/">About</a>
   <a href="/services/">Services</a>
   <a href="/projects/">Projects</a>
-  <a
-    class="contact-button"
-    href="/contact/"
-    >Contact us</a
-  >
+  <ContactButton />
 </div>
+
+<style>
+  .top-nav-links {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding-right: 5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    padding-left: 3.5rem;
+  }
+
+  .top-nav-links.expanded {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    height: 20rem;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 15rem;
+  }
+
+  .top-nav-links.expanded a {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid white;
+  }
+
+  .expanded {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    .top-nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: none;
+      padding-right: 5rem;
+    }
+
+    .top-nav-links {
+      width: 100%;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 500;
+      margin-left: 4rem;
+    }
+  }
+</style>
