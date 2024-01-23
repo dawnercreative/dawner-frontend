@@ -1,5 +1,5 @@
 ---
-import FooterNav from './FooterNav.astro';
+import ContactButton from './ContactButton.astro';
 ---
 
 <footer>
@@ -9,36 +9,87 @@ import FooterNav from './FooterNav.astro';
       >We would love to hear about your project!<br />Get in touch and we will
       get back to you shortly.</p
     >
-    <a
-      class="contact-button"
-      href="/contact"
-      >Contact us</a
-    >
-  </div>
-  <div class="footer-bottom-container">
-    <FooterNav />
-    <div class="contact-info">
-      <h4>Contact</h4>
-      <p>+61 422 023 586</p>
-      <p>Sunshine Coast, QLD, Australia</p>
-      <p
-        ><a href="mailto:hello@dawnercreative.com">hello@dawnercreative.com</a
-        ></p
+    <ContactButton />
+    <hr />
+    <div class="footer-bottom-container">
+      <div class="footer-nav-left">
+        <h4>Pages</h4>
+        <nav>
+          <a
+            href="/about/"
+            aria-label="About us"
+            >About</a
+          >
+          <a
+            href="/services/"
+            aria-label="Our services"
+            >Services</a
+          >
+          <a
+            href="/projects/"
+            aria-label="Our projects"
+            >Projects</a
+          >
+          <a
+            href="/contact/"
+            aria-label="Contact us"
+            >Contact us</a
+          >
+          <a
+            href="/licensees/"
+            aria-label="Licensees information"
+            >Licensees</a
+          >
+          <a
+            href="/terms/"
+            aria-label="Terms of Services"
+            >Terms of Services</a
+          >
+          <a
+            href="/privacy/"
+            aria-label="Privacy policy"
+            >Privacy policy</a
+          >
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            aria-label="Visit our Facebook page"
+            >Facebook</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            aria-label="Visit our Instagram profile"
+            >Instagram</a
+          >
+        </nav></div
       >
+      <div class="footer-contact-right">
+        <h4>Contact</h4>
+        <p>+61 422 023 586</p>
+        <p>Sunshine Coast, QLD, Australia</p>
+        <p
+          ><a href="mailto:hello@dawnercreative.com">hello@dawnercreative.com</a
+          ></p
+        >
+      </div>
     </div>
+    <ContactButton />
   </div>
 </footer>
 
 <style>
+  .footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8rem;
+    padding-bottom: 7rem;
+  }
+
   footer {
     background-color: black;
     color: white;
     padding: 5rem 8rem;
-  }
-  .footer-bottom-container {
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
   }
 
   footer h2 {
@@ -47,6 +98,11 @@ import FooterNav from './FooterNav.astro';
     font-size: 3.75rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 125%; /* 4.6875rem */
+    line-height: 125%;
+  }
+
+  .work-with-us hr {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
   }
 </style>

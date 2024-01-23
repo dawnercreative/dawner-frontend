@@ -22,7 +22,7 @@ html {
 
 hr {
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 5rem;
   border: none;
   height: 1px;
   background-color: lightgrey;
