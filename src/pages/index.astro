@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageDescription from '../components/PageDescription.astro';
+import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <!-- <div class="banner-container">
+  <div class="banner-container">
     <div class="text-container">
       <h1>Website design & development</h1>
       <p>
@@ -23,46 +25,13 @@ import '../styles/global.css';
       alt="abstract purple image"
     />
   </div>
-  <section class="page-description">
-    <p
-      ><span class="black-text"
-        >At Dawner Creative, we offer a comprehensive suite of website design
-        and development services to bring your digital vision to life.</span
-      ><span class="grey-text">
-        Our team is committed to delivering bespoke solutions tailored to each
-        clients unique needs.</span
-      >
-    </p>
-    <hr />
-  </section>
-  <section>
-    <h2>Services we offer</h2>
-    <h4>Wesbite Design:</h4>
-    <p
-      >We craft visually stunning and user-friendly websites. Our design
-      approach focuses on creating a seamless user experience that aligns with
-      your brand identity and engages your audience.
-    </p>
-    <h4>Website Development:</h4>
-    <p
-      >Beyond aesthetics, we build robust, high-functioning websites. Our
-      developer utilises the latest technologies to ensure your website is fast,
-      secure and scalable.
-    </p>
-    <h4>E-Commerce Solutions:</h4>
-    <p
-      >We develop e-commerce platforms that are not only visually appealing but
-      also intuitive, secure and optimised for sales conversions.
-    </p>
-    <h4>Responsive Web Design:</h4>
-    <p
-      >With a mobile-first approach, we ensure your website looks great and
-      functions flawlessly across all devices, from desktop to mobile.
-    </p>
-  </section>
-  <section>
-    <h3>See DAWNER CREATIVE results for yourself</h3>
-  </section> -->
+  <PageDescription
+    blackText={`At Dawner Creative, we offer a comprehensive suite of website design
+  and development services to bring your digital vision to life.`}
+    greyText={`Our team is committed to delivering bespoke solutions tailored to each
+  clients unique needs.`}
+  />
+  <ServicesOnOffer />
 </BaseLayout>
 
 <style>
@@ -77,7 +46,6 @@ import '../styles/global.css';
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 1;
     padding-left: 8rem;
   }
 
@@ -87,7 +55,6 @@ import '../styles/global.css';
     float: left;
   }
   .text-container p {
-    line-height: 3;
     color: white;
     width: 50%;
     float: left;
@@ -109,39 +76,5 @@ import '../styles/global.css';
     bottom: 0;
     right: 6.5rem;
     position: absolute;
-  }
-
-  .page-description {
-    height: 40rem;
-  }
-
-  .page-description p {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 3.125rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5;
-    width: 80%;
-    float: left;
-  }
-
-  .black-text {
-    color: black;
-  }
-  .grey-text {
-    color: #58595a;
-  }
-
-  hr {
-    width: 100%;
-    margin: 0 auto;
-    border: none;
-    height: 1px;
-    background-color: lightgrey;
-  }
-
-  section {
-    padding-left: 8rem;
-    padding-right: 8rem;
   }
 </style>
