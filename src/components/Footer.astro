@@ -1,5 +1,29 @@
 ---
 import ContactButton from './ContactButton.astro';
+const mainLinks = [
+  { href: '/about/', label: 'About us', text: 'About' },
+  { href: '/services/', label: 'Our services', text: 'Services' },
+  { href: '/projects/', label: 'Our projects', text: 'Projects' },
+  { href: '/contact/', label: 'Contact us', text: 'Contact us' },
+  { href: '/licensees/', label: 'Licensees information', text: 'Licensees' },
+  { href: '/terms/', label: 'Terms of Services', text: 'Terms of Services' },
+  { href: '/privacy/', label: 'Privacy policy', text: 'Privacy policy' },
+];
+
+const socialLinks = [
+  {
+    href: 'https://www.facebook.com/',
+    label: 'Visit our Facebook page',
+    text: 'Facebook',
+    target: '_blank',
+  },
+  {
+    href: 'https://www.instagram.com/',
+    label: 'Visit our Instagram profile',
+    text: 'Instagram',
+    target: '_blank',
+  },
+];
 ---
 
 <footer>
@@ -11,70 +35,46 @@ import ContactButton from './ContactButton.astro';
     >
     <ContactButton />
     <hr />
-    <div class="footer-bottom-container">
-      <div class="footer-nav-left">
-        <h4>Pages</h4>
-        <nav>
-          <a
-            href="/about/"
-            aria-label="About us"
-            >About</a
-          >
-          <a
-            href="/services/"
-            aria-label="Our services"
-            >Services</a
-          >
-          <a
-            href="/projects/"
-            aria-label="Our projects"
-            >Projects</a
-          >
-          <a
-            href="/contact/"
-            aria-label="Contact us"
-            >Contact us</a
-          ><br />
-          <a
-            href="/licensees/"
-            aria-label="Licensees information"
-            >Licensees</a
-          >
-          <a
-            href="/terms/"
-            aria-label="Terms of Services"
-            >Terms of Services</a
-          >
-          <a
-            href="/privacy/"
-            aria-label="Privacy policy"
-            >Privacy policy</a
-          ><br />
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            aria-label="Visit our Facebook page"
-            >Facebook</a
-          >
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            aria-label="Visit our Instagram profile"
-            >Instagram</a
-          >
-        </nav></div
-      >
-      <div class="footer-contact-right">
-        <h4>Contact</h4>
-        <p>+61 422 023 586</p>
-        <p>Sunshine Coast, QLD, Australia</p>
-        <p
-          ><a href="mailto:hello@dawnercreative.com">hello@dawnercreative.com</a
-          ></p
-        >
+  </div>
+  <div class="footer-bottom-container">
+    <div class="footer-nav-left">
+      <h4>Pages</h4>
+      <nav>
+        {
+          mainLinks.map((link) => (
+            <a
+              href={link.href}
+              aria-label={link.label}
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </nav>
+      <div class="social-links">
+        {
+          socialLinks.map((link) => (
+            <a
+              href={link.href}
+              aria-label={link.label}
+              target={link.target}
+            >
+              {link.text}
+            </a>
+          ))
+        }
       </div>
     </div>
-  </div>nb
+    <div class="footer-contact-right">
+      <h4>Contact</h4>
+      <p>+61 422 023 586</p>
+      <p>Sunshine Coast, QLD, Australia</p>
+      <p
+        ><a href="mailto:hello@dawnercreative.com">hello@dawnercreative.com</a
+        ></p
+      >
+    </div>
+  </div>
 </footer>
 
 <style>
@@ -82,7 +82,6 @@ import ContactButton from './ContactButton.astro';
     display: flex;
     justify-content: space-between;
     padding-right: 8rem;
-    padding-bottom: 7rem;
   }
 
   footer {
@@ -105,29 +104,16 @@ import ContactButton from './ContactButton.astro';
     margin-top: 5rem;
   }
 
-  .footer-nav-left {
+  .footer-nav-left nav {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    gap: 1rem; /* This adds space between the items */
+    width: 40%;
+    gap: 1rem;
   }
 
-  .footer-nav-left a {
-    padding-bottom: 2rem; /* Adds space between rows of links */
-  }
-
-  /* First row: 4 items */
-  .footer-nav-left a:nth-child(-n + 4) {
-    flex: 1 1 22%; /* Adjusts the flex-basis to around 22% to fit 4 items in a row */
-  }
-
-  /* Second row: 3 items */
-  .footer-nav-left a:nth-child(n + 5):nth-child(-n + 7) {
-    flex: 1 1 30%; /* Adjusts the flex-basis to around 30% to fit 3 items in a row */
-  }
-
-  /* Third row: 2 items */
-  .footer-nav-left a:nth-child(n + 8):nth-child(-n + 9) {
-    flex: 1 1 45%; /* Adjusts the flex-basis to around 45% to fit 2 items in a row */
+  .footer-contact-right p,
+  .footer-contact-right a {
+    font-size: 1.25rem;
+    color: rgba(189, 189, 189, 1);
   }
 </style>
