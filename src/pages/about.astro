@@ -1,8 +1,126 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <slot />
+  <div class="banner-container">
+    <div class="text-container">
+      <h1>About Us</h1>
+      <p
+        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        voluptate culpa ullam eius dignissimos, molestias ea assumenda odio
+        expedita voluptas praesentium incidunt officia temporibus tempore
+        inventore?</p
+      >
+    </div>
+  </div>
+  <section class="about">
+    <h2>Shaping a vision, delivering a brand.</h2>
+    <div class="about-text">
+      <p
+        >At Dawner Creative, we go beyond standard website builders like
+        WordPress, Wix, and Shopify. We specialize in creating bespoke websites,
+        each uniquely designed to reflect our clients' individual needs and
+        vision.</p
+      ><p
+        >Our team is dedicated to crafting custom digital experiences, ensuring
+        that your website is not just another online presence, but a standout
+        reflection of your brand. With our comprehensive design and development
+        services, we focus on delivering a one-of-a-kind site that captures the
+        essence of your business.</p
+      >
+    </div>
+  </section>
+  <ServicesOnOffer />
+  <section>
+    <div class="team-container">
+      <h2>The Team</h2>
+      <div class="image-row">
+        <img
+          src="/images/team-1.png"
+          alt="team member one"
+        />
+        <p>Jon Armstront<br />CEO at Dawner Creative</p>
+        <div class="team-member">
+          <p>Jon Armstront<br />CEO at Dawner Creative</p>
+          <img
+            src="/images/team-2.png"
+            alt="team member two"
+          />
+        </div>
+        <div class="team-member">
+          <p>Jon Armstront<br />CEO at Dawner Creative</p>
+          <img
+            src="/images/team-3.png"
+            alt="team member three"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .banner-container {
+      display: flex;
+      background-color: black;
+      position: relative;
+      height: 50rem;
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 8rem;
+      z-index: 1;
+    }
+
+    .text-container h1 {
+      color: white;
+      float: left;
+    }
+    .text-container p {
+      color: white;
+      width: 50%;
+      float: left;
+    }
+
+    .about {
+      padding: 5rem 8rem 10rem 8rem;
+      background-color: white;
+    }
+    .about h2,
+    .team-container h2 {
+      font-weight: 500;
+    }
+    .about p {
+      font-family: 'Work Sans', sans-serif;
+      color: rgba(88, 89, 90, 1);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 2.5rem;
+      float: left;
+    }
+
+    .about-text {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+      padding-right: 20rem;
+    }
+
+    .team-container {
+      background-color: white;
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+
+    .image-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  </style>
 </BaseLayout>
