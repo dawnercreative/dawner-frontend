@@ -6,7 +6,9 @@ import ContactButton from './ContactButton.astro';
   <a href="/about/">About</a>
   <a href="/services/">Services</a>
   <a href="/projects/">Projects</a>
-  <ContactButton />
+  <div class="nav-contact-button">
+    <ContactButton />
+  </div>
 </div>
 
 <style>
@@ -22,7 +24,7 @@ import ContactButton from './ContactButton.astro';
     color: white;
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
-    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   @media screen and (max-width: 768px) {

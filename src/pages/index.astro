@@ -16,25 +16,46 @@ import '../styles/global.css';
     </div>
     <img
       class="home-banner-image"
-      src="/images/banner-image.png"
+      src="/images/index-banner.png"
       alt="abstract purple image"
     />
     <img
       class="home-banner-image-2"
-      src="/images/banner-image-2.png"
+      src="/images/index-banner-2.png"
       alt="abstract purple image"
     />
   </div>
   <PageDescription
-    blackText={`At Dawner Creative, we offer a comprehensive suite of website design
-  and development services to bring your digital vision to life.`}
-    greyText={`Our team is committed to delivering bespoke solutions tailored to each
-  clients unique needs.`}
+    blackText={`At Dawner Creative, we go beyond standard website builders and specialize in creating bespoke websites,
+     each uniquely designed to reflect our clients' individual needs and vision.
+    `}
+    greyText={`Our team is dedicated to crafting custom digital experiences, ensuring that your website is not just 
+    another online presence, but a standout reflection of your brand.`}
   />
   <ServicesOnOffer />
+  <section>
+    <div class="results-container">
+      <h2>See DAWNER CREATIVE<br />results for yourself</h2>
+      <div class="image-row">
+        <img
+          src="/images/portfolio-2.jpg"
+          alt="landing page for a dance studio"
+        />
+        <img
+          src="/images/portfolio-1.jpg"
+          alt="landing page for a fasion company"
+        />
+        <img
+          src="/images/portfolio-3.jpg"
+          alt="youtube cover for a musicician"
+        />
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
+  /* Banner Section */
   .banner-container {
     display: flex;
     background-color: black;
@@ -77,5 +98,34 @@ import '../styles/global.css';
     bottom: 0;
     right: 6.5rem;
     position: absolute;
+  }
+
+  /* Results Section */
+  .results-container {
+    background-color: black;
+    color: white;
+    padding: 5rem 8rem;
+  }
+
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .image-row img {
+    flex: 1;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    /* Adjust breakpoint as needed */
+    .image-row img {
+      width: 100%; /* On smaller screens, images take full width of the container */
+      flex: none; /* This stops the flex-grow behavior on small screens */
+    }
   }
 </style>
