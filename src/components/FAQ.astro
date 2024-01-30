@@ -1,0 +1,105 @@
+---
+let faqs = [
+  {
+    question: 'What services do you offer?',
+    answer: 'Testing testing testing',
+  },
+  { question: 'How does the design process work?', answer: '' },
+  { question: 'What is your pricing structure?', answer: '' },
+  { question: 'How long does a website take to create?', answer: '' },
+  { question: 'Can you provide hosting or domain services?', answer: '' },
+];
+---
+
+<div class="faq">
+  <h2>Frequently<br />asked questions</h2>
+  <div class="accordion">
+    {
+      faqs.map((faq) => (
+        <div class="accordion-item">
+          <button class="accordion-toggle">{faq.question}</button>
+          <div class="accordion-content">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.accordion-toggle');
+
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener('click', function () {
+        // Toggle the active class on the button
+        this.classList.toggle('active');
+
+        // Get the content panel and toggle it
+        const content = this.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq {
+    background-color: white;
+    padding: 5rem 8rem;
+  }
+  .faq > h2 {
+    font-weight: 400;
+  }
+  .accordion {
+    width: 100%;
+    max-width: 60rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid darkgrey;
+    margin: 0.5rem 0;
+  }
+
+  .accordion-toggle {
+    background: white;
+    padding: 0.6rem;
+    width: 100%;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .accordion-toggle:after {
+    content: '+';
+    float: right;
+  }
+
+  .accordion-toggle.active:after {
+    content: '-';
+  }
+
+  .accordion-content {
+    padding: 0 1rem;
+    display: none;
+    overflow: hidden;
+    font-size: 1rem;
+    font-family: var(--primary-font);
+  }
+
+  .accordion-content > p {
+    font-size: 1.25rem;
+  }
+</style>

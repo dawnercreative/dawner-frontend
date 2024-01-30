@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 // import ServicesOnOffer from '../components/ServicesOnOffer.astro';
+import FAQ from '../components/FAQ.astro';
 import '../styles/global.css';
 ---
 
@@ -9,10 +10,11 @@ import '../styles/global.css';
     <div class="text-container">
       <h1>About Us</h1>
       <p
-        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        voluptate culpa ullam eius dignissimos, molestias ea assumenda odio
-        expedita voluptas praesentium incidunt officia temporibus tempore
-        inventore?</p
+        >Dawner Creative stands at the forefront of bespoke web design and
+        development, crafting tailored digital experiences that captivate and
+        engage. Based on Australia's Sunshine Coast, our expert team commits to
+        excellence, ensuring each client's vision flourishes with seamless,
+        responsive, and secure websites.</p
       >
     </div>
   </div>
@@ -86,7 +88,6 @@ import '../styles/global.css';
       </div>
     </div>
   </section>
-
   <section>
     <div class="team-container">
       <h2>The Team</h2>
@@ -118,123 +119,127 @@ import '../styles/global.css';
       </div>
     </div>
   </section>
-
-  <style>
-    h4 {
-      font-family: var(--primary-font);
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: white;
-    }
-
-    .services-on-offer h3 {
-      text-transform: uppercase;
-      color: white;
-    }
-
-    .service p {
-      font-family: var(--primary-font);
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1.35rem;
-      color: white;
-    }
-
-    .services-on-offer {
-      display: flex;
-      justify-content: space-between;
-      padding: 8rem;
-      background-color: black;
-      background-image: url('../images/about-image.png');
-      background-position: left bottom; /* Position the image at the bottom of the section */
-      background-repeat: no-repeat;
-    }
-
-    .services-title-left {
-      width: 25%;
-    }
-
-    .services-right {
-      width: 70%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-row-gap: 3rem;
-      grid-column-gap: 5rem;
-    }
-
-    .banner-container {
-      display: flex;
-      background-color: black;
-      position: relative;
-      height: 50rem;
-    }
-
-    .text-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 8rem;
-      z-index: 1;
-    }
-
-    .text-container h1 {
-      color: white;
-      float: left;
-    }
-    .text-container p {
-      color: white;
-      width: 50%;
-      float: left;
-    }
-
-    .about {
-      padding: 5rem 8rem 10rem 8rem;
-      background-color: white;
-    }
-    .about h2,
-    .team-container h2 {
-      font-weight: 500;
-    }
-    .about p {
-      font-family: 'Work Sans', sans-serif;
-      color: rgba(88, 89, 90, 1);
-      font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 2.5rem;
-      float: left;
-    }
-
-    .about-text {
-      display: flex;
-      flex-direction: row;
-      gap: 4rem;
-      padding-right: 20rem;
-    }
-
-    .team-container {
-      background-color: white;
-      padding: 5rem 8rem;
-    }
-
-    .image-row {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .team-member {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .team-member > p {
-      font-family: 'Work Sans', sans-serif;
-      color: rgba(88, 89, 90, 1);
-      font-size: 1.25rem;
-      font-weight: 500;
-    }
-  </style>
+  <FAQ />
 </BaseLayout>
+
+<style>
+  h4 {
+    font-family: var(--primary-font);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .services-on-offer h3 {
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .service p {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.35rem;
+    color: white;
+  }
+
+  .services-on-offer {
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem;
+    background-color: black;
+    background-image: url('../images/about-image.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+
+  .services-title-left {
+    width: 25%;
+  }
+
+  .services-right {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 5rem;
+  }
+
+  .banner-container {
+    display: flex;
+    background-color: black;
+    position: relative;
+    height: 50rem;
+    background-image: url('../images/about-banner.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8rem;
+    z-index: 1;
+  }
+
+  .text-container h1 {
+    color: white;
+    float: left;
+  }
+  .text-container p {
+    color: white;
+    width: 50%;
+    float: left;
+  }
+
+  .about {
+    padding: 5rem 8rem 10rem 8rem;
+    background-color: white;
+  }
+  .about h2,
+  .team-container h2 {
+    font-weight: 500;
+  }
+  .about p {
+    font-family: 'Work Sans', sans-serif;
+    color: rgba(88, 89, 90, 1);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    float: left;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding-right: 20rem;
+  }
+
+  .team-container {
+    background-color: white;
+    padding: 5rem 8rem;
+  }
+
+  .image-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-member > p {
+    font-family: 'Work Sans', sans-serif;
+    color: rgba(88, 89, 90, 1);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+</style>
