@@ -7,23 +7,11 @@ import '../styles/global.css';
 
 <BaseLayout>
   <div class="banner-container">
-    <div class="text-container">
-      <h1>Website design & development</h1>
-      <p>
-        Our team are experienced in website design <br />and development. We
-        craft tailored web solutions for your unique vision</p
-      >
-    </div>
-    <img
-      class="home-banner-image"
-      src="/images/index-banner.png"
-      alt="abstract purple image"
-    />
-    <img
-      class="home-banner-image-2"
-      src="/images/index-banner-2.png"
-      alt="abstract purple image"
-    />
+    <h1>Website design & development</h1>
+    <p>
+      Our team are experienced in website design <br />and development. We craft
+      tailored web solutions for your unique vision</p
+    >
   </div>
   <PageDescription
     blackText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
@@ -59,47 +47,23 @@ import '../styles/global.css';
   .banner-container {
     display: flex;
     background-color: black;
-    position: relative;
-    height: 50rem;
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
+    /* position: relative; */
     justify-content: center;
+    flex-direction: column;
+    height: 50rem;
+    background-image: url('/images/index-banner.png'),
+      url('/images/index-banner-2.png');
+    background-position:
+      top right,
+      bottom right 20%;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .banner-container > h1,
+  p {
+    color: white;
+    width: 60%;
     padding-left: 8rem;
-    z-index: 1;
-  }
-
-  .text-container h1 {
-    color: white;
-    width: 60%;
-    float: left;
-  }
-  .text-container p {
-    color: white;
-    width: 60%;
-    float: left;
-  }
-
-  .home-banner-image {
-    width: 59.25rem;
-    max-width: 100%;
-    max-height: 44.6875rem;
-    flex-shrink: 1;
-    top: 0;
-    right: 0;
-    position: absolute;
-  }
-
-  .home-banner-image-2 {
-    width: 27.75rem;
-    max-height: 14.4375rem;
-    max-width: 100%;
-    flex-shrink: 1;
-    bottom: 0;
-    right: 6.5rem;
-    position: absolute;
   }
 
   /* Results Section */

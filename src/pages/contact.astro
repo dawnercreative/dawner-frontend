@@ -1,8 +1,134 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FAQ from '../components/FAQ.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <slot />
+  <div class="banner-container">
+    <div class="text-container">
+      <h1>Stay in Touch</h1>
+      <p
+        >We're looking for each other. Fill in your details and we will be in
+        touch shortly.</p
+      >
+    </div>
+  </div>
+  <div class="form-container">
+    <form
+      action="/submit-form"
+      method="POST"
+    >
+      <label for="name">FULL NAME*</label><br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+      /><br />
+
+      <label for="phone">PHONE*</label><br />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+      /><br />
+      <label for="email">EMAIL ADDRESS*</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+      /><br />
+      <label for="message">MESSAGE:</label><br />
+      <textarea
+        id="message"
+        name="message"
+      ></textarea><br />
+
+      <input
+        class="form-button"
+        type="submit"
+        value="Send Request"
+      />
+    </form>
+  </div>
+  <FAQ />
 </BaseLayout>
+
+<style>
+  .banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    background-color: black;
+    position: relative;
+    background-image: url('../images/contact-image.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50%;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 5rem 8rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+  }
+
+  input {
+    border: 1px solid grey;
+    border-radius: 2rem;
+    height: 4rem;
+    width: 50rem;
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+
+  textarea {
+    border-radius: 1rem;
+    width: 100%;
+    height: 10rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  .form-button {
+    border: 1px solid black;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    /* padding: 0.5rem 1.5rem; */
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  .form-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+  }
+
+  .form-button:active {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+</style>
