@@ -2,12 +2,29 @@
 let faqs = [
   {
     question: 'What services do you offer?',
-    answer: 'Testing testing testing',
+    answer:
+      'Our company specializes in comprehensive website design and development services, encompassing everything from initial design or redesign to SEO optimization and ensuring responsive, device-friendly, and accessible web solutions. We pride ourselves on crafting fully custom websites without relying on standard website builders such as Wix, Squarespace, WordPress, or Shopify. This approach affords our clients complete control over their websites, eliminating the need for monthly subscription fees, aside from domain name registration, hosting, and any applicable additional charges.',
   },
-  { question: 'How does the design process work?', answer: '' },
-  { question: 'What is your pricing structure?', answer: '' },
-  { question: 'How long does a website take to create?', answer: '' },
-  { question: 'Can you provide hosting or domain services?', answer: '' },
+  {
+    question: 'How does the process work?',
+    answer:
+      'Our process begins with an initial consultation to understand your business, brand, and specific website requirements, ensuring we are a good match for your project. Following this, we conduct a detailed questionnaire to delve into your vision for the site, including desired pages, features, and functionalities. Based on your inputs, we embark on the design phase, which typically spans 1-2 weeks, to craft a preliminary design concept. Upon your approval of the design, we proceed with the development phase, which can range from 2-6 weeks depending on the project complexity. After development, we manage hosting and security setup to launch your website smoothly. Post-launch, we remain available for any maintenance or updates you may need.',
+  },
+  {
+    question: 'What is your pricing structure?',
+    answer:
+      'Our pricing is tailored to the specific needs and scale of your project. We offer a variety of design and development packages, accommodating everything from a simple single-page website to a more complex site with up to eight pages. For those who prefer to explore the design possibilities before fully committing to the development phase, we provide flexible options. An accurate quote will be provided once we have a thorough understanding of your objectives and requirements.',
+  },
+  {
+    question: 'How long does a website take to create?',
+    answer:
+      'The duration for creating a website varies based on its complexity and specific requirements. Generally, the process can take anywhere from 2 to 8 weeks, depending on the scale and intricacies involved in the project.',
+  },
+  {
+    question: 'Can you provide hosting or domain services?',
+    answer:
+      'Yes, we offer comprehensive support for all your website development needs, including domain registration and website hosting. We collaborate with a selection of trusted providers to ensure you receive the best service. While we facilitate these services, you will retain full control over your domain and hosting arrangements, with payments made directly to the service providers.',
+  },
 ];
 ---
 
@@ -33,10 +50,8 @@ let faqs = [
 
     toggles.forEach(function (toggle) {
       toggle.addEventListener('click', function () {
-        // Toggle the active class on the button
         this.classList.toggle('active');
 
-        // Get the content panel and toggle it
         const content = this.nextElementSibling;
         if (content.style.display === 'block') {
           content.style.display = 'none';
@@ -98,6 +113,7 @@ let faqs = [
     overflow: hidden;
     font-size: 1rem;
     font-family: var(--primary-font);
+    line-height: 1.5;
   }
 
   .accordion-content > p {

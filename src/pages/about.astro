@@ -95,10 +95,7 @@ import '../styles/global.css';
             src="/images/team-1.png"
             alt="team member one"
           />
-          <p
-            ><strong>Madeliene Stiller</strong><br />Director | Designer &
-            Developer</p
-          >
+          <p><strong>Madeliene Stiller</strong><br />Director & Developer</p>
         </div>
         <div class="team-member">
           <img
@@ -167,32 +164,23 @@ import '../styles/global.css';
     display: flex;
     background-color: black;
     position: relative;
+    justify-content: center;
+    flex-direction: column;
     height: 50rem;
     background-image: url('../images/about-banner.png');
     background-position: right bottom;
     background-repeat: no-repeat;
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-left: 8rem;
-    z-index: 1;
   }
 
-  .text-container h1 {
+  .banner-container > h1,
+  p {
     color: white;
-    float: left;
-  }
-  .text-container p {
-    color: white;
-    width: 50%;
-    float: left;
+    width: 60%;
   }
 
   .about {
-    padding: 5rem 8rem 10rem 8rem;
+    padding: 5rem 0 10rem 8rem;
     background-color: white;
   }
   .about h2,
