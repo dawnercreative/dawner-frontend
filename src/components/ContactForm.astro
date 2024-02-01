@@ -1,0 +1,118 @@
+---
+
+---
+
+<div class="form-container">
+  <form method="POST">
+    <input
+      type="hidden"
+      name="_captcha"
+      value="false"
+    />
+    <input
+      type="hidden"
+      name="_next"
+      value="http://localhost:4321/thankyou"
+    />
+    <label for="name">FULL NAME*</label><br />
+    <input
+      type="text"
+      id="name"
+      name="name"
+    /><br />
+
+    <label for="phone">PHONE*</label><br />
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+    /><br />
+    <label for="email">EMAIL ADDRESS*</label><br />
+    <input
+      type="email"
+      id="email"
+      name="email"
+    /><br />
+    <label for="message">MESSAGE:</label><br />
+    <textarea
+      id="message"
+      name="message"
+    ></textarea><br />
+
+    <input
+      class="form-button"
+      type="submit"
+      value="Send Request"
+    />
+  </form>
+</div>
+
+<style>
+  .form-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 5rem 8rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+  }
+
+  input {
+    border: 1.5px solid grey;
+    border-radius: 2rem;
+    height: 4rem;
+    width: 50rem;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-family: var(--primary-font);
+    padding-left: 0.5rem;
+    font-weight: bold;
+  }
+
+  textarea {
+    border-radius: 1rem;
+    width: 100%;
+    height: 10rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    border: 1.5px solid grey;
+  }
+
+  input,
+  textarea {
+    box-shadow: 1px 2px 2px 2px lightgray;
+    padding-left: 2rem;
+  }
+
+  .form-button {
+    border: 2px solid black;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    /* padding: 0.5rem 1.5rem; */
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  .form-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+  }
+
+  .form-button:active {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+</style>
