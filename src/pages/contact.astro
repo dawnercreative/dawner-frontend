@@ -3,26 +3,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Calendly from '../components/Calendly.astro';
 import FAQ from '../components/FAQ.astro';
+import Banner from '../components/Banner.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <div class="banner-container">
-    <div class="text-container">
-      <h1>Contact Us</h1>
-      <p
-        >We’re looking for each other. Fill in the form and we will be in touch
-        shortly.<br />Alternatively, if you're ready to lock in a chat, schedule
-        a 30min call via the Calendly booking below.</p
-      >
-    </div>
-  </div>
+  <Banner
+    headerText={`Get in Touch`}
+    bodyText={`We are looking for each other. Fill in the form and we will be in touch shortly.
+    Alternatively, if you're ready to lock in a chat, schedule a 30min call via the Calendly booking below.`}
+    backgroundPosition="bottom 20% right 25%"
+  />
   <ContactForm />
   <Calendly />
   <FAQ />
 </BaseLayout>
 
-<style>
+<!-- <style>
   .banner-container {
     display: flex;
     justify-content: center;
@@ -44,4 +41,4 @@ import '../styles/global.css';
     width: 50%;
     text-align: center;
   }
-</style>
+</style> -->

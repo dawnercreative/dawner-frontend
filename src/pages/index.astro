@@ -2,14 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageDescription from '../components/PageDescription.astro';
 import ServicesOnOffer from '../components/ServicesOnOffer.astro';
+import Banner from '../components/Banner.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <div class="banner-container">
-    <h1>Website design & development</h1>
-    <p>Elevate Your Online Presence with Bespoke Web Solutions</p>
-  </div>
+  <Banner
+    headerText={`Website design and development`}
+    bodyText={`Elevate your online presence with bespoke web solutions`}
+  />
   <PageDescription
     firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
     services to bring your digital vision to life. 
@@ -66,7 +67,7 @@ import '../styles/global.css';
 
   /* Results Section */
   .results-container {
-    background-color: #e6e5e5;
+    background-color: #e3dcd8;
     color: #3d3d40;
     padding: 5rem 8rem;
   }

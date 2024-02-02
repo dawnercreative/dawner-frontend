@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 // import ServicesOnOffer from '../components/ServicesOnOffer.astro';
+import Banner from '../components/Banner.astro';
 import ServicesReverse from '../components/ServicesReverse.astro';
 import Team from '../components/Team.astro';
 import FAQ from '../components/FAQ.astro';
@@ -8,16 +9,16 @@ import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <div class="banner-container">
-    <h1>About Us</h1>
-    <p
-      >Dawner Creative stands at the forefront of bespoke web design and
-      development, crafting tailored digital experiences that captivate and
-      engage. Based on Australia's Sunshine Coast, our expert team commits to
-      excellence, ensuring each client's vision flourishes with seamless,
-      responsive, and secure websites.</p
-    >
-  </div>
+  <Banner
+    id="about-banner"
+    headerText={`About Us`}
+    bodyText={`Dawner Creative stands at the forefront of bespoke web design and development,
+    crafting tailored digital experiences that captivate and engage. Based on Australia's
+    Sunshine Coast, our expert team commits to excellence, ensuring each client's vision
+    flourishes with seamless, responsive, and secure websites.`}
+    backgroundPosition="top"
+    s
+  />
   <section class="about">
     <h2>Shaping a vision, delivering a brand.</h2>
     <div class="about-text">
@@ -41,23 +42,8 @@ import '../styles/global.css';
 </BaseLayout>
 
 <style>
-  .banner-container {
-    display: flex;
-    background-color: black;
-    position: relative;
-    justify-content: center;
-    flex-direction: column;
-    height: 50rem;
-    background-image: url('../images/about-banner.png');
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    padding-left: 8rem;
-  }
-
-  .banner-container > h1,
-  p {
-    color: white;
-    width: 60%;
+  #about-banner {
+    background-position: top;
   }
 
   .about {

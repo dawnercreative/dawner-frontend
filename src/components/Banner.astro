@@ -1,0 +1,40 @@
+---
+export interface BannerProps {
+  headerText: string;
+  bodyText: string;
+  backgroundPosition: string;
+}
+const { headerText, bodyText, backgroundPosition } = Astro.props as BannerProps;
+---
+
+<div
+  class="banner-container"
+  style={{ backgroundPosition }}
+>
+  <h1 class="headerText">{headerText}</h1>
+  <p class="bodyText">{bodyText}</p>
+</div>
+
+<style>
+  /* Banner Section */
+  .banner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60rem;
+    background-image: url('/images/v752-ning-18.jpg');
+    background-position: left 90% bottom 30%;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .banner-container > h1,
+  p {
+    color: #3d3d40;
+    width: 60%;
+    padding-left: 8rem;
+  }
+
+  .banner-container > p {
+    font-size: 1.75rem;
+  }
+</style>
