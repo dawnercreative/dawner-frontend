@@ -8,8 +8,9 @@ import '../styles/global.css';
 
 <BaseLayout>
   <Banner
-    headerText={`Website design and development`}
-    bodyText={`Elevate your online presence with bespoke web solutions`}
+    headerText={`Website design & development`}
+    bodyText={`Elevate your online presence with bespoke web solutions tailored to your unique brand.`}
+    backgroundImage="/images/banner-2.jpg"
   />
   <PageDescription
     firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
@@ -42,17 +43,15 @@ import '../styles/global.css';
 
 <style>
   /* Banner Section */
-  .banner-container {
+  /* .banner-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 60rem;
+    height: 50rem;
     background-image: url('/images/v752-ning-18.jpg');
-    background-position:
-      left 90% bottom 30%,
-      bottom right 20%;
+    background-size: contain;
     background-repeat: no-repeat, no-repeat;
-  }
+  } */
 
   .banner-container > h1,
   p {
@@ -91,15 +90,9 @@ import '../styles/global.css';
       width: 100%;
       flex: none;
     }
-    .home-banner-image {
-      width: 100%;
-      max-height: auto;
-    }
 
-    .home-banner-image-2 {
-      width: 100%;
-      max-height: auto;
-      right: 0;
+    .banner-container {
+      background-position: top;
     }
   }
 </style>

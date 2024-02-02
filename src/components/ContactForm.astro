@@ -14,29 +14,31 @@
       name="_next"
       value="http://localhost:4321/thankyou"
     />
-    <label for="name">FULL NAME*</label><br />
     <input
       type="text"
       id="name"
       name="name"
+      placeholder="FULL NAME*"
     /><br />
 
-    <label for="phone">PHONE*</label><br />
     <input
       type="tel"
       id="phone"
       name="phone"
+      placeholder="PHONE*"
     /><br />
-    <label for="email">EMAIL ADDRESS*</label><br />
+
     <input
       type="email"
       id="email"
       name="email"
+      placeholder="EMAIL ADDRESS*"
     /><br />
-    <label for="message">MESSAGE:</label><br />
+
     <textarea
       id="message"
       name="message"
+      placeholder="MESSAGE:"
     ></textarea><br />
 
     <input
@@ -63,16 +65,10 @@
 
   input {
     border: 1.5px solid grey;
-    border-radius: 2rem;
+    border-radius: 1rem;
     height: 4rem;
     width: 50rem;
     margin-bottom: 1rem;
-  }
-
-  label {
-    font-family: var(--primary-font);
-    padding-left: 0.5rem;
-    font-weight: bold;
   }
 
   textarea {
@@ -91,11 +87,12 @@
   }
 
   .form-button {
-    border: 2px solid black;
+    border: 2px solid #5b5b5f;
     font-size: 1rem;
     font-weight: bold;
-    background-color: black;
     color: white;
+    background-color: #68686e;
+
     border-radius: 2rem;
     /* padding: 0.5rem 1.5rem; */
     transition:
@@ -104,15 +101,15 @@
   }
 
   .form-button:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    border: 2px solid black;
-    color: black;
+    background-color: #8f8f96;
+    border: 2px solid #838386;
+    color: white;
     cursor: pointer;
   }
 
   .form-button:active {
-    background-color: white;
     color: black;
+    background-color: white;
     cursor: pointer;
   }
 </style>
