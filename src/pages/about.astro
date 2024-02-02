@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionWrapper from '../layouts/SectionWrapper.astro';
 // import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import Banner from '../components/Banner.astro';
 import ServicesReverse from '../components/ServicesReverse.astro';
@@ -19,21 +20,23 @@ import '../styles/global.css';
     backgroundImage="/images/banner-3.jpg"
   />
   <section class="about">
-    <h2>Shaping a vision, delivering a brand.</h2>
-    <div class="about-text">
-      <p
-        >At Dawner Creative, we go beyond standard website builders like
-        WordPress, Wix, and Shopify. We specialize in creating bespoke websites,
-        each uniquely designed to reflect our clients' individual needs and
-        vision.</p
-      ><p
-        >Our team is dedicated to crafting custom digital experiences, ensuring
-        that your website is not just another online presence, but a standout
-        reflection of your brand. With our comprehensive design and development
-        services, we focus on delivering a one-of-a-kind site that captures the
-        essence of your business.</p
-      >
-    </div>
+    <SectionWrapper>
+      <h2>Shaping a vision, delivering a brand.</h2>
+      <div class="about-text">
+        <p
+          >At Dawner Creative, we go beyond standard website builders like
+          WordPress, Wix, and Shopify. We specialize in creating bespoke
+          websites, each uniquely designed to reflect our clients' individual
+          needs and vision.</p
+        ><p
+          >Our team is dedicated to crafting custom digital experiences,
+          ensuring that your website is not just another online presence, but a
+          standout reflection of your brand. With our comprehensive design and
+          development services, we focus on delivering a one-of-a-kind site that
+          captures the essence of your business.</p
+        >
+      </div>
+    </SectionWrapper>
   </section>
   <ServicesReverse />
   <Team />
@@ -64,8 +67,7 @@ import '../styles/global.css';
 
   .about-text {
     display: flex;
-    flex-direction: row;
     gap: 4rem;
-    padding-right: 20rem;
+    padding-right: 30%;
   }
 </style>

@@ -1,37 +1,39 @@
 ---
-
+import SectionWrapper from '../layouts/SectionWrapper.astro';
 ---
 
 <section>
   <div class="team-container">
-    <h2>Who are we?</h2>
-    <div class="image-row">
-      <div class="team-member">
-        <img
-          src="/images/team-1.png"
-          alt="team member one"
-        />
-        <p
-          ><strong>Madeliene Stiller</strong><br />Madeliene is the Founder and
-          Lead Designer at Dawner Creative, overseeing all aspects of design and
-          development. She maintains a hands-on approach, ensuring direct
-          communication and personalized guidance for clients throughout the
-          entire project lifecycle.</p
-        >
+    <SectionWrapper>
+      <h2>Who are we?</h2>
+      <div class="image-row">
+        <div class="team-member">
+          <img
+            src="/images/team-1.png"
+            alt="team member one"
+          />
+          <p
+            ><strong>Madeliene Stiller</strong><br />Madeliene is the Founder
+            and Lead Designer at Dawner Creative, overseeing all aspects of
+            design and development. She maintains a hands-on approach, ensuring
+            direct communication and personalized guidance for clients
+            throughout the entire project lifecycle.</p
+          >
+        </div>
+        <div class="team-member">
+          <img
+            src="/images/team-2.png"
+            alt="team member two"
+          />
+          <p
+            ><strong>Benjamin Joyce</strong><br />Ben is a Lead Developer with a
+            distinguished career, including roles at one of Australia's most
+            successful tech companies, as well as experience in a government
+            agency and start up.</p
+          >
+        </div>
       </div>
-      <div class="team-member">
-        <img
-          src="/images/team-2.png"
-          alt="team member two"
-        />
-        <p
-          ><strong>Benjamin Joyce</strong><br />Ben is a Lead Developer with a
-          distinguished career, including roles at one of Australia's most
-          successful tech companies, as well as experience in a government
-          agency and start up.</p
-        >
-      </div>
-    </div>
+    </SectionWrapper>
   </div>
 </section>
 
@@ -44,20 +46,41 @@
   .image-row {
     display: flex;
     align-items: center;
-    gap: 4rem;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .team-member {
     display: flex;
-    width: 50%;
+    flex: 1;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    /* height: 100%; */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .team-member > * {
+    flex: 1 1 0;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+  }
+
+  .team-member > img {
+    max-width: 380px;
+    max-height: 468px;
+    min-width: 380px;
+    min-height: 468px;
   }
 
   .team-member > p {
     font-family: 'Work Sans', sans-serif;
     color: rgba(88, 89, 90, 1);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
-    padding-left: 4rem;
+    min-width: 18rem;
   }
 </style>
