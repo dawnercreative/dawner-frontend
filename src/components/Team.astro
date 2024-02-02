@@ -2,40 +2,38 @@
 import SectionWrapper from '../layouts/SectionWrapper.astro';
 ---
 
-<section>
+<SectionWrapper>
   <div class="team-container">
-    <SectionWrapper>
-      <h2>Who are we?</h2>
-      <div class="image-row">
-        <div class="team-member">
-          <img
-            src="/images/team-1.png"
-            alt="team member one"
-          />
-          <p
-            ><strong>Madeliene Stiller</strong><br />Madeliene is the Founder
-            and Lead Designer at Dawner Creative, overseeing all aspects of
-            design and development. She maintains a hands-on approach, ensuring
-            direct communication and personalized guidance for clients
-            throughout the entire project lifecycle.</p
-          >
-        </div>
-        <div class="team-member">
-          <img
-            src="/images/team-2.png"
-            alt="team member two"
-          />
-          <p
-            ><strong>Benjamin Joyce</strong><br />Ben is a Lead Developer with a
-            distinguished career, including roles at one of Australia's most
-            successful tech companies, as well as experience in a government
-            agency and start up.</p
-          >
-        </div>
+    <h2>Who are we?</h2>
+    <div class="image-row">
+      <div class="team-member">
+        <img
+          src="/images/team-1.png"
+          alt="team member one"
+        />
+        <p
+          ><strong>Madeliene Stiller</strong><br />Madeliene is the Founder and
+          Lead Designer at Dawner Creative, overseeing all aspects of design and
+          development. She maintains a hands-on approach, ensuring direct
+          communication and personalized guidance for clients throughout the
+          entire project lifecycle.</p
+        >
       </div>
-    </SectionWrapper>
+      <div class="team-member">
+        <img
+          src="/images/team-2.png"
+          alt="team member two"
+        />
+        <p
+          ><strong>Benjamin Joyce</strong><br />Ben is a Lead Developer with a
+          distinguished career, including roles at one of Australia's most
+          successful tech companies, as well as experience in a government
+          agency and start up.</p
+        >
+      </div>
+    </div>
   </div>
-</section>
+</SectionWrapper>
 
 <style>
   .team-container {

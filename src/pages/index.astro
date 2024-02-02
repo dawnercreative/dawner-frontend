@@ -4,6 +4,7 @@ import PageDescription from '../components/PageDescription.astro';
 import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import Banner from '../components/Banner.astro';
 import '../styles/global.css';
+import SectionWrapper from '../layouts/SectionWrapper.astro';
 ---
 
 <BaseLayout>
@@ -20,7 +21,7 @@ import '../styles/global.css';
     secondText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
   />
   <ServicesOnOffer />
-  <section>
+  <SectionWrapper>
     <div class="results-container">
       <h2>See DAWNER CREATIVE<br />results for yourself</h2>
       <div class="image-row">
@@ -38,7 +39,7 @@ import '../styles/global.css';
         />
       </div>
     </div>
-  </section>
+  </SectionWrapper>
 </BaseLayout>
 
 <style>

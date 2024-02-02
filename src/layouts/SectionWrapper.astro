@@ -1,4 +1,27 @@
-<section>
+---
+type Props = {
+  class?: string;
+  role?:
+    | 'main'
+    | 'complementary'
+    | 'contentinfo'
+    | 'form'
+    | 'navigation'
+    | 'search';
+  classList?: (
+    | string
+    | { [key: string]: boolean }
+    | Array<string | { [key: string]: boolean } | false | null | undefined>
+  )[];
+};
+
+const { classList, ...restProps } = Astro.props as Props;
+---
+
+<section
+  class:list={classList}
+  {...restProps}
+>
   <div style={{ maxWidth: '1960px', marginLeft: 'auto', marginRight: 'auto' }}>
     <slot />
   </div>

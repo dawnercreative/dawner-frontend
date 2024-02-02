@@ -1,4 +1,6 @@
 ---
+import SectionWrapper from '../layouts/SectionWrapper.astro';
+
 export interface BannerProps {
   headerText: string;
   bodyText: string;
@@ -7,13 +9,15 @@ export interface BannerProps {
 const { headerText, bodyText, backgroundImage } = Astro.props as BannerProps;
 ---
 
-<div
-  class="banner-container"
-  style={{ backgroundImage: `url(${backgroundImage})` }}
+<SectionWrapper
+  class:list={[
+    'banner-container',
+    { backgroundImage: `url(${backgroundImage})` },
+  ]}
 >
   <h1 class="headerText">{headerText}</h1>
   <p class="bodyText">{bodyText}</p>
-</div>
+</SectionWrapper>
 
 <style>
   /* Banner Section */
@@ -24,13 +28,13 @@ const { headerText, bodyText, backgroundImage } = Astro.props as BannerProps;
     height: 50rem;
     background-image: url('/images/v752-ning-18.jpg');
     background-size: cover;
-    background-position: fixed;
+    background-attachment: fixed;
   }
 
-  .banner-container > h1 {
+  h1 {
     color: #3d3d40;
-    width: 50%;
-    padding-left: 8rem;
+    /* width: 50%;
+    padding-left: 8rem; */
   }
 
   .banner-container > p {
@@ -38,5 +42,8 @@ const { headerText, bodyText, backgroundImage } = Astro.props as BannerProps;
     width: 60%;
     color: #3d3d40;
     padding-left: 8rem;
+  }
+
+  @media screen and (max-width: 768px) {
   }
 </style>
