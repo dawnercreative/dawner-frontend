@@ -1,15 +1,15 @@
 ---
 export interface PageDescriptionProps {
-  blackText: string;
-  greyText: string;
+  firstText: string;
+  secondText: string;
 }
-const { blackText, greyText } = Astro.props as PageDescriptionProps;
+const { firstText, secondText } = Astro.props as PageDescriptionProps;
 ---
 
 <section class="page-description">
   <p>
-    <span class="black-text">{blackText}</span>
-    <span class="grey-text">{greyText}</span>
+    <span class="first-text">{firstText}</span>
+    <span class="second-text">{secondText}</span>
   </p>
   <hr />
 </section>
@@ -30,10 +30,10 @@ const { blackText, greyText } = Astro.props as PageDescriptionProps;
     background-color: white;
   }
 
-  .black-text {
-    color: black;
+  .first-text {
+    color: #3d3d40;
   }
-  .grey-text {
+  .second-text {
     color: #58595a;
   }
 </style>

@@ -8,19 +8,14 @@ import '../styles/global.css';
 <BaseLayout>
   <div class="banner-container">
     <h1>Website design & development</h1>
-    <p>
-      Welcome to Dawner Creative. We specialize in providing a full range of
-      website design and development services, dedicated to bringing your
-      digital vision to life. We prides ourselves on crafting bespoke web
-      solutions that cater precisely to your unique requirements.
-    </p>
+    <p>Elevate Your Online Presence with Bespoke Web Solutions</p>
   </div>
   <PageDescription
-    blackText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
+    firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
     services to bring your digital vision to life. 
     
     `}
-    greyText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
+    secondText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
   />
   <ServicesOnOffer />
   <section>
@@ -48,30 +43,31 @@ import '../styles/global.css';
   /* Banner Section */
   .banner-container {
     display: flex;
-    background-color: black;
-    /* position: relative; */
     justify-content: center;
     flex-direction: column;
-    height: 50rem;
-    background-image: url('/images/index-banner.png'),
-      url('/images/index-banner-2.png');
+    height: 60rem;
+    background-image: url('/images/v752-ning-18.jpg');
     background-position:
-      top right,
+      left 90% bottom 30%,
       bottom right 20%;
     background-repeat: no-repeat, no-repeat;
   }
 
   .banner-container > h1,
   p {
-    color: white;
+    color: #3d3d40;
     width: 60%;
     padding-left: 8rem;
   }
 
+  .banner-container > p {
+    font-size: 1.75rem;
+  }
+
   /* Results Section */
   .results-container {
-    background-color: black;
-    color: white;
+    background-color: #e6e5e5;
+    color: #3d3d40;
     padding: 5rem 8rem;
   }
 
