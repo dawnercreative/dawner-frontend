@@ -98,4 +98,28 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
     grid-row-gap: 3rem;
     grid-column-gap: 5rem;
   }
+
+  @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+      .services-on-offer {
+        padding: 2rem 2rem;
+      }
+
+      .services-title-left {
+        width: 100%;
+        text-align: center;
+      }
+
+      .services-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
 </style>

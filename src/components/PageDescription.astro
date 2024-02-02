@@ -17,7 +17,7 @@ const { firstText, secondText } = Astro.props as PageDescriptionProps;
 <style>
   .page-description p {
     font-family: 'Work Sans', sans-serif;
-    font-size: 3.125rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 600;
     line-height: 175%;
@@ -35,5 +35,14 @@ const { firstText, secondText } = Astro.props as PageDescriptionProps;
   }
   .second-text {
     color: #58595a;
+  }
+
+  @media (max-width: 768px) {
+    .page-description p {
+      font-size: 1.5rem;
+    }
+    .page-description {
+      padding: 3rem 2rem;
+    }
   }
 </style>

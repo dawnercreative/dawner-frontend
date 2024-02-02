@@ -4,7 +4,7 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
 
 <SectionWrapper class="services-on-offer">
   <div class="services-title-left">
-    <h3>Services we offer</h3>
+    <h3>SERVICES WE OFFER</h3>
   </div>
   <div class="services-right">
     <div class="service">
@@ -63,10 +63,6 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
     font-weight: bold;
   }
 
-  .services-on-offer h3 {
-    text-transform: uppercase;
-  }
-
   .service p {
     font-family: var(--primary-font);
     font-size: 1rem;
@@ -91,5 +87,27 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 3rem;
     grid-column-gap: 5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .services-on-offer {
+      padding: 2rem 2rem;
+    }
+
+    .services-title-left {
+      width: 100%;
+      text-align: center;
+    }
+
+    .services-right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
   }
 </style>

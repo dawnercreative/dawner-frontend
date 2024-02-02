@@ -31,19 +31,21 @@ const { headerText, bodyText, backgroundImage } = Astro.props as BannerProps;
     background-attachment: fixed;
   }
 
-  h1 {
-    color: #3d3d40;
-    /* width: 50%;
-    padding-left: 8rem; */
-  }
-
   .banner-container > p {
     font-size: 1.75rem;
     width: 60%;
-    color: #3d3d40;
     padding-left: 8rem;
   }
 
   @media screen and (max-width: 768px) {
+    .banner-container {
+      height: 30rem;
+    }
+
+    .banner-container h1,
+    p {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 </style>

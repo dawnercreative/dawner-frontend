@@ -43,20 +43,8 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
 </BaseLayout>
 
 <style>
-  /* Banner Section */
-  /* .banner-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 50rem;
-    background-image: url('/images/v752-ning-18.jpg');
-    background-size: contain;
-    background-repeat: no-repeat, no-repeat;
-  } */
-
   .banner-container > h1,
   p {
-    color: #3d3d40;
     width: 60%;
     padding-left: 8rem;
   }
@@ -68,7 +56,6 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
   /* Results Section */
   .results-container {
     background-color: #e3dcd8;
-    color: #3d3d40;
     padding: 5rem 8rem;
   }
 
@@ -89,11 +76,24 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
   @media screen and (max-width: 768px) {
     .image-row img {
       width: 100%;
-      flex: none;
+      max-width: 100%;
     }
 
     .banner-container {
       background-position: top;
+    }
+
+    .results-container {
+      padding: 2rem 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .image-row {
+      flex-direction: column;
     }
   }
 </style>

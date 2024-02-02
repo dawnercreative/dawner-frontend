@@ -1,5 +1,7 @@
   html {
     overflow-x: hidden;
+    color: #3D3D40;
+
   }
 
   body {
@@ -36,21 +38,18 @@
     font-family: var(--primary-font);
     font-size: 3.75rem;
     font-weight: 800;
-    color: #3D3D40;
   }
 
   h3 {
     font-family: var(--primary-font);
     font-size: 2.2rem;
     font-weight: 800;
-    color: #3D3D40;
   }
 
   h4 {
     font-family: var(--primary-font);
     font-size: 2rem;
     font-weight: 500;
-    color: #3D3D40;
   }
 
   p {
@@ -61,7 +60,6 @@
   }
 
   a {
-    color: #3D3D40;
     font-family: var(--primary-font);
     font-weight: 500;
     font-size: 1rem;
@@ -76,14 +74,16 @@
 
   @media screen and (max-width: 768px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       font-family: var(--primary-font);
       font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
     }
 
     .hamburger {
       display: block;
     }
-
-
   }
