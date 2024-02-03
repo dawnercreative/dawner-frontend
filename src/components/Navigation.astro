@@ -35,27 +35,23 @@ import ContactButton from './ContactButton.astro';
 
     .top-nav-links a {
       text-decoration: none;
-      padding-left: 3.5rem;
+      float: right;
+      margin-right: 1rem;
     }
 
     .top-nav-links.expanded {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      background-color: black;
-      border-radius: 0.5rem;
-      padding: 2rem;
-      height: 20rem;
+      background-color: white;
+      padding: 0.5rem;
+      height: 15rem;
+      width: 10rem;
       align-items: flex-end;
       justify-content: center;
       margin-top: 15rem;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     }
-
-    .top-nav-links.expanded a {
-      padding-bottom: 0.5rem;
-      border-bottom: 0.5px solid white;
-    }
-
     .expanded {
       display: flex;
     }
