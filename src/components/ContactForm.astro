@@ -112,4 +112,32 @@
     background-color: white;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    .form-container {
+      padding: 3rem 2rem;
+    }
+
+    form {
+      max-width: 100%;
+    }
+
+    .form-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2rem;
+    }
+    form input {
+      max-width: 100%;
+      height: 3rem;
+      border-radius: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    form > textarea {
+      border-radius: 0.5rem;
+      padding-left: 1rem;
+    }
+  }
 </style>
