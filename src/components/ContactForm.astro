@@ -44,7 +44,7 @@
     <input
       class="form-button"
       type="submit"
-      value="Send Request"
+      value="SEND REQUEST"
     />
   </form>
 </div>
@@ -53,8 +53,7 @@
   .form-container {
     display: flex;
     justify-content: center;
-    background-color: white;
-    padding: 5rem 8rem;
+    padding: 2rem 8rem;
   }
 
   form {
@@ -64,8 +63,7 @@
   }
 
   input {
-    border: 1.5px solid grey;
-    border-radius: 1rem;
+    border-radius: 2rem;
     height: 4rem;
     width: 50rem;
     margin-bottom: 1rem;
@@ -77,39 +75,35 @@
     height: 10rem;
     padding-top: 1rem;
     margin-bottom: 2rem;
-    border: 1.5px solid grey;
   }
 
   input,
   textarea {
     box-shadow: 1px 2px 2px 2px lightgray;
     padding-left: 2rem;
+    background-color: inherit;
+    border: 1.5px solid #775854;
   }
 
   .form-button {
-    border: 2px solid #5b5b5f;
+    border: 1px solid #775854;
     font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #68686e;
-
     border-radius: 2rem;
-    /* padding: 0.5rem 1.5rem; */
     transition:
       background-color 0.3s,
       color 0.3s;
   }
 
   .form-button:hover {
-    background-color: #8f8f96;
+    background-color: #c4cdcd;
     border: 2px solid #838386;
     color: white;
     cursor: pointer;
   }
 
   .form-button:active {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #7e898a;
     cursor: pointer;
   }
 

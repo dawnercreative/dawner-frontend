@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionWrapper from '../layouts/SectionWrapper.astro';
-// import ServicesOnOffer from '../components/ServicesOnOffer.astro';
+import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import Banner from '../components/Banner.astro';
-import ServicesReverse from '../components/ServicesReverse.astro';
 import Team from '../components/Team.astro';
 import FAQ from '../components/FAQ.astro';
 import '../styles/global.css';
@@ -18,7 +17,15 @@ import '../styles/global.css';
     Sunshine Coast, our expert team commits to excellence, ensuring each client's vision
     flourishes with seamless, responsive, and secure websites.`}
     backgroundImage="/images/banner-3.jpg"
+    extraPadding={true}
   />
+  <div class="banner-image">
+    <img
+      src="/images/banner-2.jpg"
+      alt="Desk with laptop and paper"
+      width="100%"
+    /></div
+  >
   <SectionWrapper class="about">
     <h2>Shaping a vision, delivering a brand.</h2>
     <div class="about-text">
@@ -36,7 +43,7 @@ import '../styles/global.css';
       >
     </div>
   </SectionWrapper>
-  <ServicesReverse />
+  <ServicesOnOffer />
   <Team />
   <FAQ />
 </BaseLayout>
@@ -47,8 +54,7 @@ import '../styles/global.css';
   }
 
   .about {
-    padding: 5rem 0 10rem 8rem;
-    background-color: white;
+    padding: 5rem 0 5rem 8rem;
   }
   .about h2,
   .team-container h2 {
@@ -57,10 +63,9 @@ import '../styles/global.css';
   .about p {
     font-family: 'Work Sans', sans-serif;
     color: rgba(88, 89, 90, 1);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 2.5rem;
-    float: left;
   }
 
   .about-text {

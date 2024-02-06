@@ -3,8 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageDescription from '../components/PageDescription.astro';
 import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import Banner from '../components/Banner.astro';
-import '../styles/global.css';
+import FAQ from '../components/FAQ.astro';
 import SectionWrapper from '../layouts/SectionWrapper.astro';
+import '../styles/global.css';
 ---
 
 <BaseLayout>
@@ -13,33 +14,44 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
     bodyText={`Elevate your online presence with bespoke web solutions tailored to your unique brand.`}
     backgroundImage="/images/banner-2.jpg"
   />
-  <PageDescription
-    firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
+  <div>
+    <div class="banner-image">
+      <img
+        src="/images/banner.png"
+        alt="Desk with laptop and paper"
+        width="100%"
+      /></div
+    >
+
+    <PageDescription
+      firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
     services to bring your digital vision to life. 
     
     `}
-    secondText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
-  />
-  <ServicesOnOffer />
-  <SectionWrapper>
-    <div class="results-container">
-      <h2>See DAWNER CREATIVE<br />results for yourself</h2>
-      <div class="image-row">
-        <img
-          src="/images/portfolio-2.jpg"
-          alt="landing page for a dance studio"
-        />
-        <img
-          src="/images/portfolio-1.jpg"
-          alt="landing page for a fasion company"
-        />
-        <img
-          src="/images/portfolio-3.jpg"
-          alt="youtube cover for a musicician"
-        />
+      secondText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
+    />
+    <ServicesOnOffer />
+    <SectionWrapper>
+      <div class="results-container">
+        <h2>See DAWNER CREATIVE<br />results for yourself</h2>
+        <div class="image-row">
+          <img
+            src="/images/portfolio-2.jpg"
+            alt="landing page for a dance studio"
+          />
+          <img
+            src="/images/portfolio-1.jpg"
+            alt="landing page for a fasion company"
+          />
+          <img
+            src="/images/portfolio-3.jpg"
+            alt="youtube cover for a musicician"
+          />
+        </div>
       </div>
-    </div>
-  </SectionWrapper>
+    </SectionWrapper>
+  </div>
+  <FAQ />
 </BaseLayout>
 
 <style>
@@ -55,7 +67,6 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
 
   /* Results Section */
   .results-container {
-    background-color: #e3dcd8;
     padding: 5rem 8rem;
   }
 
