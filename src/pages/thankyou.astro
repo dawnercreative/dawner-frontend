@@ -1,8 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Banner from '../components/Banner.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Calendly from '../components/Calendly.astro';
+import FAQ from '../components/FAQ.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <h1>Thank you for contacting us. We will be in touch shortly.</h1>
+  <Banner
+    headerText={`Get in Touch`}
+    bodyText={`We are looking for each other. Fill in the form and we will be in touch
+      shortly. Alternatively, if you're ready to lock in a chat, schedule a
+      30min call via the Calendly booking below.`}
+    backgroundImage={['/images/vector1.png', '/images/vector8.png']}
+    backgroundImageMobile={'/images/vector8.png'}
+    backgroundPosition={['right', 'left bottom']}
+    extraPadding={true}
+  />
+  <div>
+    <h4>Thank you for contacting us. We will be in touch shortly!</h4>
+  </div>
+  <ContactForm />
+  <Calendly />
+  <FAQ />
 </BaseLayout>
+
+<style>
+  h4 {
+    text-align: center;
+    font-weight: bold;
+  }
+</style>

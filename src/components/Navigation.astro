@@ -2,57 +2,63 @@
 import ContactButton from './ContactButton.astro';
 ---
 
-<div class="top-nav-links">
+<div
+  class="top-nav-links"
+  {...Astro.props}
+>
+  <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/services/">Services</a>
   <!-- <a href="/projects/">Projects</a> -->
   <div class="nav-contact-button">
     <ContactButton />
   </div>
+  <button id="close-nav">X</button>
+</div>
 
-  <style>
+<style>
+  .top-nav-links {
+    display: flex;
+    align-items: center;
+    line-height: none;
+    padding-right: 5rem;
+  }
+
+  .top-nav-links a {
+    text-decoration: none;
+    color: #3d3d40;
+    font-family: 'Work Sans', sans-serif;
+    margin-right: 4rem;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
     .top-nav-links {
-      display: flex;
-      align-items: center;
-      line-height: none;
-      padding-right: 5rem;
+      display: none;
+      width: 100vw;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     .top-nav-links a {
       text-decoration: none;
-      color: #3d3d40;
-      font-family: 'Work Sans', sans-serif;
-      margin-right: 4rem;
-      font-size: 1rem;
+      float: right;
+      margin-right: 1rem;
     }
 
-    @media screen and (max-width: 768px) {
-      .top-nav-links {
-        display: none;
-        width: 100%;
-      }
-
-      .top-nav-links a {
-        text-decoration: none;
-        float: right;
-        margin-right: 1rem;
-      }
-
-      .top-nav-links.expanded {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        padding: 0.5rem;
-        height: max-content;
-        align-items: flex-start; /* Align items to the start */
-        justify-content: flex-start; /* Align content to the start */
-        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-        position: relative; /* Add relative positioning */
-      }
-
-      .expanded {
-        display: flex;
-      }
+    .top-nav-links.expanded {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: 1rem;
+      height: 15rem;
+      align-items: flex-end;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     }
-  </style>
-</div>
+
+    .expanded {
+      display: flex;
+    }
+  }
+</style>

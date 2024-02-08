@@ -19,7 +19,6 @@ const {
 const imageStyles = {
   'background-image': `url(${backgroundImage[0]}), url(${backgroundImage[1]})`,
   'background-position': `${backgroundPosition[0]}, ${backgroundPosition[1]}`,
-  // 'background-image-mobile': `url(${backgroundImage[0]})`,
 };
 ---
 
@@ -50,22 +49,19 @@ const imageStyles = {
 
   .header-text {
     color: #775854;
+    font-weight: 400;
   }
 
   .extra-padding h1,
   .extra-padding p {
-    padding: 0 8rem; /* Adjust as needed */
+    padding: 0 4rem;
   }
 
   @media screen and (max-width: 768px) {
     .banner-container {
       height: auto;
       display: flex;
-    }
-
-    .banner-container {
-      background-image: var(--background-image-mobile);
-      background-size: 70%;
+      background-size: 30%;
     }
 
     .banner-container h1 {

@@ -1,6 +1,7 @@
 ---
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
+import HamburgerMenu from './HamburgerMenu.astro';
 import '../styles/global.css';
 ---
 
@@ -11,8 +12,7 @@ import '../styles/global.css';
     alt="Dawner Creative Logo"
   />
   <nav class="header-nav">
-    <Hamburger />
-    <Navigation />
+    <HamburgerMenu menu={Navigation}><Hamburger /></HamburgerMenu>
   </nav>
 </header>
 

@@ -1,32 +1,75 @@
 ---
+export interface HamburgerMenuProps {
+  menu: any;
+}
 
+const { menu: Menu } = Astro.props as HamburgerMenuProps;
 ---
 
-<div
-  class="hamburger"
-  onclick="toggleMenu()"
->
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
-</div>
+<>
+  <slot />
+  <Menu id="menu" />
+</>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const hamburger = document.querySelector('.hamburger');
-    const closeIcon = document.querySelector('.close-icon');
-    const navLinks = document.querySelector('.top-nav-links');
+  const addListeners = () => {
+    const menu = document.querySelector('#menu');
+    const hamburger = document.querySelector('#hamburger');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('expanded');
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
+    const menuClassChangeHandler = new MutationObserver((mutationsList) => {
+      for (let mutation of mutationsList) {
+        console.log({ mutation });
+        if (
+          mutation.type === 'attributes' &&
+          mutation.attributeName === 'class'
+        ) {
+          if (mutation.target.classList.contains('expanded')) {
+            addExpandedListeners();
+          } else {
+            hamburgerListener();
+          }
+        }
+      }
     });
 
-    closeIcon.addEventListener('click', () => {
-      navLinks.classList.toggle('expanded');
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
+    menuClassChangeHandler.observe(menu, { attributes: true });
+
+    const toggleMenu = (isOpen) => {
+      if (menu.classList.contains('expanded') && !isOpen) {
+        menu.classList.toggle('expanded');
+      } else if (!menu.classList.contains('expanded') && isOpen) {
+        menu.classList.toggle('expanded');
+      }
+    };
+
+    const addExpandedListeners = () => {
+      const closeButton = document.querySelector('#close-nav');
+      closeButton.addEventListener('click', () => {
+        toggleMenu(false);
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          console.log('Escape key pressed');
+          toggleMenu(false);
+        }
+      });
+    };
+
+    const hamburgerListener = () => {
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          toggleMenu(true);
+        }
+      });
+      hamburger.addEventListener('click', () => {
+        toggleMenu(true);
+      });
+    };
+    hamburgerListener();
+  };
+
+  ['DOMContentLoaded', 'astro:after-swap'].forEach((event) => {
+    console.log('adding listener');
+    document.addEventListener(event, addListeners);
   });
 </script>

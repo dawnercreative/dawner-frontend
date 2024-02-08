@@ -2,24 +2,14 @@
 
 ---
 
-<div class="hamburger">
+<div
+  class="hamburger"
+  id="hamburger"
+>
   <span class="line"></span>
   <span class="line"></span>
   <span class="line"></span>
 </div>
-
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', (_event) => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.top-nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('expanded');
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  });
-</script>
 
 <style>
   .hamburger {
