@@ -5,55 +5,54 @@ import ContactButton from './ContactButton.astro';
 <div class="top-nav-links">
   <a href="/about/">About</a>
   <a href="/services/">Services</a>
-  <a href="/projects/">Projects</a>
+  <!-- <a href="/projects/">Projects</a> -->
   <div class="nav-contact-button">
     <ContactButton />
   </div>
-</div>
 
-<style>
-  .top-nav-links {
-    display: flex;
-    align-items: center;
-    line-height: none;
-    padding-right: 5rem;
-  }
-
-  .top-nav-links a {
-    text-decoration: none;
-    color: #3d3d40;
-    font-family: 'Work Sans', sans-serif;
-    margin-right: 4rem;
-    font-size: 1rem;
-  }
-
-  @media screen and (max-width: 768px) {
+  <style>
     .top-nav-links {
-      display: none;
-      width: 100%;
+      display: flex;
+      align-items: center;
+      line-height: none;
+      padding-right: 5rem;
     }
 
     .top-nav-links a {
       text-decoration: none;
-      float: right;
-      margin-right: 1rem;
+      color: #3d3d40;
+      font-family: 'Work Sans', sans-serif;
+      margin-right: 4rem;
+      font-size: 1rem;
     }
 
-    .top-nav-links.expanded {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      background-color: white;
-      padding: 0.5rem;
-      height: 15rem;
-      width: 10rem;
-      align-items: flex-end;
-      justify-content: center;
-      margin-top: 15rem;
-      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    @media screen and (max-width: 768px) {
+      .top-nav-links {
+        display: none;
+        width: 100%;
+      }
+
+      .top-nav-links a {
+        text-decoration: none;
+        float: right;
+        margin-right: 1rem;
+      }
+
+      .top-nav-links.expanded {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 0.5rem;
+        height: max-content;
+        align-items: flex-start; /* Align items to the start */
+        justify-content: flex-start; /* Align content to the start */
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+        position: relative; /* Add relative positioning */
+      }
+
+      .expanded {
+        display: flex;
+      }
     }
-    .expanded {
-      display: flex;
-    }
-  }
-</style>
+  </style>
+</div>

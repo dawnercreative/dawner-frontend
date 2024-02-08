@@ -1,13 +1,5 @@
 ---
-type Props = {
-  class?: string;
-  role?:
-    | 'main'
-    | 'complementary'
-    | 'contentinfo'
-    | 'form'
-    | 'navigation'
-    | 'search';
+type Props = astroHTML.JSX.IntrinsicElements['section'] & {
   classList?: (
     | string
     | { [key: string]: boolean }

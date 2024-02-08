@@ -2,15 +2,19 @@
 
 ---
 
-<div class="hamburger">
+<div
+  class="hamburger"
+  onclick="toggleMenu()"
+>
   <span class="line"></span>
   <span class="line"></span>
   <span class="line"></span>
 </div>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', (_event) => {
+  document.addEventListener('DOMContentLoaded', (event) => {
     const hamburger = document.querySelector('.hamburger');
+    const closeIcon = document.querySelector('.close-icon');
     const navLinks = document.querySelector('.top-nav-links');
 
     hamburger.addEventListener('click', () => {
@@ -18,25 +22,11 @@
       hamburger.classList.toggle('hidden');
       closeIcon.classList.toggle('hidden');
     });
+
+    closeIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('expanded');
+      hamburger.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
   });
 </script>
-
-<style>
-  .hamburger {
-    padding-right: 2rem;
-    cursor: pointer;
-  }
-
-  .hamburger .line {
-    display: block;
-    width: 3rem;
-    height: 0.2rem;
-    margin-bottom: 0.6rem;
-    background-color: black;
-    border-radius: 0.2rem;
-  }
-
-  .hidden {
-    display: none;
-  }
-</style>

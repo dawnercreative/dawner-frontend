@@ -1,8 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Banner from '../components/Banner.astro';
+import BannerImage from '../components/BannerImage.astro';
+import FAQ from '../components/FAQ.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <slot />
+  <Banner
+    headerText={`Services`}
+    bodyText={`Transforming Ideas into Digital Successes: Discover Our Tailored Web Solutions & Seamless Process.`}
+    backgroundImage={['/images/vector.png', '/images/vector4.png']}
+    backgroundPosition={['left bottom -10%', 'right']}
+    extraPadding={true}
+  />
+  <BannerImage imageSrc="/images/banner-3.jpg" />
+  <FAQ />
 </BaseLayout>

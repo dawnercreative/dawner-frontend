@@ -15,12 +15,18 @@ const {
   backgroundPosition,
   extraPadding,
 } = Astro.props as BannerProps;
+
+const imageStyles = {
+  'background-image': `url(${backgroundImage[0]}), url(${backgroundImage[1]})`,
+  'background-position': `${backgroundPosition[0]}, ${backgroundPosition[1]}`,
+  // 'background-image-mobile': `url(${backgroundImage[0]})`,
+};
 ---
 
 <SectionWrapper
   id="about-banner"
   class:list={['banner-container', { 'extra-padding': extraPadding }]}
-  style={`--background-image: url('${backgroundImage[0]}'), url('${backgroundImage[1]}'); --background-position: ${backgroundPosition[0]}, ${backgroundPosition[1]}; --background-image-mobile: url('${backgroundImage[0]}');`}
+  style={imageStyles}
 >
   <h1 class="header-text">{headerText}</h1>
   <p class="body-text">{bodyText}</p>

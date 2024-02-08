@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageDescription from '../components/PageDescription.astro';
 import ServicesOnOffer from '../components/ServicesOnOffer.astro';
 import Banner from '../components/Banner.astro';
+import BannerImage from '../components/BannerImage.astro';
 import Results from '../components/Results.astro';
 import FAQ from '../components/FAQ.astro';
 import SectionWrapper from '../layouts/SectionWrapper.astro';
@@ -16,36 +17,27 @@ import '../styles/global.css';
     backgroundImage={['/images/vector1.png', '/images/vector.png']}
     backgroundPosition={['right', 'left 80%']}
   />
-  <div>
-    <div class="banner-image">
-      <img
-        src="/images/banner.png"
-        alt="Desk with laptop and paper"
-        width="100%"
-      /></div
-    >
-
-    <PageDescription
-      firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
+  <BannerImage />
+  <PageDescription
+    firstText={`At Dawner Creative, we offer a comprehensive suite of website design and development 
     services to bring your digital vision to life. 
     
     `}
-      secondText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
-    />
-    <ServicesOnOffer />
-    <SectionWrapper />
-    <Results />
-    <FAQ />
-  </div>
-
-  <style>
-    .banner-container {
-      background-image: var(--background-image);
-      background-position: var(--background-position);
-    }
-
-    .banner-container > p {
-      font-size: 1.75rem;
-    }
-  </style>
+    secondText={`Our team is committed to delivering bespoke solutions tailored to each client's unique needs.`}
+  />
+  <ServicesOnOffer />
+  <SectionWrapper />
+  <Results />
+  <FAQ />
 </BaseLayout>
+
+<style>
+  .banner-container {
+    background-image: var(--background-image);
+    background-position: var(--background-position);
+  }
+
+  .banner-container > p {
+    font-size: 1.75rem;
+  }
+</style>

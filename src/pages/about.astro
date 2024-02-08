@@ -6,6 +6,7 @@ import Banner from '../components/Banner.astro';
 import Team from '../components/Team.astro';
 import FAQ from '../components/FAQ.astro';
 import '../styles/global.css';
+import BannerImage from '../components/BannerImage.astro';
 ---
 
 <BaseLayout>
@@ -20,13 +21,7 @@ import '../styles/global.css';
     backgroundPosition="right"
     extraPadding={true}
   />
-  <div class="banner-image">
-    <img
-      src="/images/banner-2.jpg"
-      alt="Desk with laptop and paper"
-      width="100%"
-    /></div
-  >
+  <BannerImage imageSrc="/images/banner-2.jpg" />
   <SectionWrapper class="about">
     <h2>Shaping a vision, delivering a brand.</h2>
     <div class="about-text">
