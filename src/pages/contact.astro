@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Banner from '../components/Banner.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Calendly from '../components/Calendly.astro';
 import FAQ from '../components/FAQ.astro';
@@ -7,39 +8,17 @@ import '../styles/global.css';
 ---
 
 <BaseLayout>
-  <div class="banner-container">
-    <h1>Get in Touch</h1>
-    <p
-      >We are looking for each other. Fill in the form and we will be in touch
-      shortly.<br />Alternatively, if you're ready to lock in a chat, schedule a
-      30min call via the Calendly booking below.</p
-    >
-  </div>
+  <Banner
+    headerText={`Get in Touch`}
+    bodyText={`We are looking for each other. Fill in the form and we will be in touch
+      shortly. Alternatively, if you're ready to lock in a chat, schedule a
+      30min call via the Calendly booking below.`}
+    backgroundImage={['/images/vector1.png', '/images/vector8.png']}
+    backgroundImageMobile={'/images/vector8.png'}
+    backgroundPosition={['right', 'left bottom']}
+    extraPadding={true}
+  />
   <ContactForm />
   <Calendly />
   <FAQ />
 </BaseLayout>
-
-<style>
-  .banner-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 40rem;
-    background-image: url('/images/v752-ning-18.jpg');
-    background-position: bottom 20% right 20%;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed;
-  }
-
-  .banner-container > h1 {
-    color: #775854;
-  }
-
-  .banner-container > p {
-    padding-left: 10rem;
-    padding-right: 10rem;
-    text-align: center;
-  }
-</style>

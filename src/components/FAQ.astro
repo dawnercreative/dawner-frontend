@@ -66,6 +66,13 @@ let faqs = [
 <style>
   .faq {
     padding: 2rem 8rem 8rem 8rem;
+    background-image: url('/images/vector12.png'), url('/images/vector7.png'),
+      url('/images/vector11.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position:
+      left,
+      top right,
+      bottom right;
   }
   .faq > h2 {
     text-align: center;
@@ -115,12 +122,18 @@ let faqs = [
   }
 
   .accordion-content > p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {
     .faq {
       padding: 3rem 0rem;
+      background-image: url('/images/vector7.png'), url('/images/vector11.png');
+      background-repeat: no-repeat, no-repeat;
+      background-position:
+        bottom 20% right,
+        top left;
+      background-size: 20%, 20%;
     }
 
     .faq > h2 {

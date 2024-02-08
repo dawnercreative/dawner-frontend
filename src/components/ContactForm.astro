@@ -3,7 +3,10 @@
 ---
 
 <div class="form-container">
-  <form method="POST">
+  <form
+    action="https://formsubmit.co/hello@dawnercreative.com"
+    method="POST"
+  >
     <input
       type="hidden"
       name="_captcha"
@@ -38,7 +41,7 @@
     <textarea
       id="message"
       name="message"
-      placeholder="MESSAGE:"
+      placeholder="Message*"
     ></textarea><br />
 
     <input
@@ -96,8 +99,7 @@
 
   .form-button:hover {
     background-color: #c4cdcd;
-    border: 2px solid #838386;
-    color: white;
+    border: 2px solid #b3b3b4;
     cursor: pointer;
   }
 
@@ -125,12 +127,10 @@
     form input {
       max-width: 100%;
       height: 3rem;
-      border-radius: 0.5rem;
       padding-left: 1rem;
     }
 
     form > textarea {
-      border-radius: 0.5rem;
       padding-left: 1rem;
     }
   }

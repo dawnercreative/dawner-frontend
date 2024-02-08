@@ -4,19 +4,23 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
 export interface BannerProps {
   headerText: string;
   bodyText: string;
-  backgroundImage: string;
+  backgroundImage: string[];
+  backgroundPosition: string[];
   extraPadding?: boolean;
 }
-const { headerText, bodyText, backgroundImage, extraPadding } =
-  Astro.props as BannerProps;
+const {
+  headerText,
+  bodyText,
+  backgroundImage,
+  backgroundPosition,
+  extraPadding,
+} = Astro.props as BannerProps;
 ---
 
 <SectionWrapper
-  class:list={[
-    'banner-container',
-    { 'extra-padding': extraPadding },
-    { backgroundImage: `url(${backgroundImage})` },
-  ]}
+  id="about-banner"
+  class:list={['banner-container', { 'extra-padding': extraPadding }]}
+  style={`--background-image: url('${backgroundImage[0]}'), url('${backgroundImage[1]}'); --background-position: ${backgroundPosition[0]}, ${backgroundPosition[1]}; --background-image-mobile: url('${backgroundImage[0]}');`}
 >
   <h1 class="header-text">{headerText}</h1>
   <p class="body-text">{bodyText}</p>
@@ -28,6 +32,10 @@ const { headerText, bodyText, backgroundImage, extraPadding } =
     display: flex;
     flex-direction: column;
     height: 30rem;
+    background-image: var(--background-image);
+    background-position: var(--background-position);
+    background-repeat: no-repeat;
+    text-align: center;
   }
 
   .body-text {
@@ -45,13 +53,26 @@ const { headerText, bodyText, backgroundImage, extraPadding } =
 
   @media screen and (max-width: 768px) {
     .banner-container {
-      height: 30rem;
+      height: auto;
+      display: flex;
     }
 
+    .banner-container {
+      background-image: var(--background-image-mobile);
+      background-size: 70%;
+    }
+
+    .banner-container h1 {
+      margin-top: 20%;
+    }
     .banner-container h1,
     p {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      text-align: center;
+    }
+
+    .banner-container p {
+      font-size: 1rem;
+      padding: 0 2rem;
     }
   }
 </style>
