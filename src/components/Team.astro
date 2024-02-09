@@ -41,9 +41,10 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
     padding: 2rem 8rem;
     background-image: url('/images/vector10.png'), url('/images/vector8.png');
     background-position:
-      left,
-      right top;
+      top left,
+      right bottom 40%;
     background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 20%;
   }
 
   .team-container > h2 {
@@ -93,6 +94,10 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
   @media (max-width: 768px) {
     .team-container {
       padding: 3rem 2rem;
+      background-position:
+        left,
+        right bottom 20%;
+      background-size: 100%, 20%;
     }
 
     h2 {
@@ -100,7 +105,7 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
     }
 
     .team-member > img {
-      max-width: 160px;
+      max-width: 170px;
       max-height: 234px;
       min-width: 160px;
       min-height: 234px;
