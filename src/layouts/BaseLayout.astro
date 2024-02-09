@@ -20,38 +20,70 @@ import Footer from '../components/Footer.astro';
       name="generator"
       content={Astro.generator}
     />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
+    <meta
+      name="description"
+      content="Dawner Creative is a web development agency providing high quality and innovative solutions."
     />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
+    <meta
+      name="keywords"
+      content="Web Development, Web Design, SEO, Digital Marketing"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:wght@300&family=Victor+Mono:wght@300&family=Work+Sans:wght@300;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
-      rel="stylesheet"
+    <meta
+      name="author"
+      content="Dawner Creative"
     />
 
-    <title>Dawner Creative</title>
-  </head>
+    <!-- Add Open Graph meta tags for better social media sharing -->
+    <meta
+      property="og:title"
+      content="Dawner Creative"
+    />
+    <meta
+      property="og:description"
+      content="Dawner Creative is a web development agency providing high quality and innovative solutions."
+    />
+    <meta
+      property="og:image"
+      content="./images/transparent-logo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.facebook.com/profile.php?id=61555841081021&mibextid=ZbWKwL"
+    />
+  </head><linkx
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  ></linkx>
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans:wght@300&family=Victor+Mono:wght@300&family=Work+Sans:wght@300;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>Dawner Creative</title>
+
   <body>
     <Header />
     <slot />
     <Footer />
   </body>
+
+
 </html>
