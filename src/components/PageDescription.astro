@@ -1,4 +1,6 @@
 ---
+import SectionWrapper from '../layouts/SectionWrapper.astro';
+
 export interface PageDescriptionProps {
   firstText: string;
   secondText: string;
@@ -6,13 +8,13 @@ export interface PageDescriptionProps {
 const { firstText, secondText } = Astro.props as PageDescriptionProps;
 ---
 
-<section class="page-description">
+<SectionWrapper class="page-description">
   <p>
     <span class="first-text">{firstText}</span>
     <span class="second-text">{secondText}</span>
   </p>
   <hr />
-</section>
+</SectionWrapper>
 
 <style>
   .page-description p {
