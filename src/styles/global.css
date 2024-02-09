@@ -24,7 +24,7 @@
     width: 100%;
     border: none;
     height: 1px;
-    background-color: black;
+    background-color: #775854;
   }
 
   /* Typography */
@@ -77,6 +77,10 @@
       font-size: 2rem;
       font-family: var(--primary-font);
       font-weight: 600;
+    }
+
+    h2 {
+      font-size: 2.5rem;
     }
 
     p {

@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Banner from '../components/Banner.astro';
 import BannerImage from '../components/BannerImage.astro';
 import FAQ from '../components/FAQ.astro';
+import ServicesOnOffer from '../components/ServicesOnOffer.astro';
+import Process from '../components/Process.astro';
 import '../styles/global.css';
 ---
 
@@ -15,5 +17,7 @@ import '../styles/global.css';
     extraPadding={true}
   />
   <BannerImage imageSrc="/images/banner-3.jpg" />
+  <ServicesOnOffer />
+  <Process />
   <FAQ />
 </BaseLayout>
