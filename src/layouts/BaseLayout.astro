@@ -59,9 +59,20 @@ import Footer from '../components/Footer.astro';
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://www.yourwebsite.com",
-        "name": "Dawner Creative",
+        "@type": "Organization",
+        "url": "https://www.dawnercreative.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+61-422-023-586",
+            "contactType": "customer service",
+            "email": "hello@dawnercreative.com"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61555841081021",
+          "https://www.instagram.com/dawnercreative/"
+        ],
         "description": "Dawner Creative is a Sunshine Coast-based web development agency providing high quality and innovative solutions."
       }
     </script>

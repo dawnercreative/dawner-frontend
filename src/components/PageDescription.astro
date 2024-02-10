@@ -8,10 +8,30 @@ export interface PageDescriptionProps {
 const { firstText, secondText } = Astro.props as PageDescriptionProps;
 ---
 
-<SectionWrapper class="page-description">
+<SectionWrapper
+  class="page-description"
+  itemscope
+  itemtype="http://schema.org/WebPage"
+>
+  <meta
+    itemprop="name"
+    content="Home"
+  />
+  <meta
+    itemprop="description"
+    content="At Dawner Creative, we offer a comprehensive suite of website design and development services to bring your digital vision to life. Our team is committed to delivering bespoke solutions tailored to each client's unique needs."
+  />
   <p>
-    <span class="first-text">{firstText}</span>
-    <span class="second-text">{secondText}</span>
+    <span
+      class="first-text"
+      itemprop="text"
+      >{firstText}</span
+    >
+    <span
+      class="second-text"
+      itemprop="text"
+      >{secondText}</span
+    >
   </p>
   <hr />
 </SectionWrapper>

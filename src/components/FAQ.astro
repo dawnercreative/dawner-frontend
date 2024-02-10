@@ -28,15 +28,34 @@ let faqs = [
 ];
 ---
 
-<div class="faq">
+<div
+  class="faq"
+  itemscope
+  itemtype="https://schema.org/FAQPage"
+>
   <h2>Frequently<br />asked questions</h2>
   <div class="accordion">
     {
       faqs.map((faq) => (
-        <div class="accordion-item">
-          <button class="accordion-toggle">{faq.question}</button>
-          <div class="accordion-content">
-            <p>{faq.answer}</p>
+        <div
+          class="accordion-item"
+          itemscope
+          itemprop="mainEntity"
+          itemtype="https://schema.org/Question"
+        >
+          <button
+            class="accordion-toggle"
+            itemprop="name"
+          >
+            {faq.question}
+          </button>
+          <div
+            class="accordion-content"
+            itemscope
+            itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer"
+          >
+            <p itemprop="text">{faq.answer}</p>
           </div>
         </div>
       ))

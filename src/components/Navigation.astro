@@ -6,16 +6,34 @@ import ContactButton from './ContactButton.astro';
   class="top-nav-links"
   {...Astro.props}
 >
-  <button id="close-nav"
-    ><img
+  <button
+    id="close-nav"
+    aria-label="Close navigation menu"
+  >
+    <img
       src="/images/close.svg"
       alt="close menu"
-    /></button
+    />
+  </button>
+  <a
+    href="/"
+    itemprop="url"
+    aria-label="Home"
+    >Home</a
   >
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/services/">Services</a>
-  <!-- <a href="/projects/">Projects</a> -->
+  <a
+    href="/about/"
+    itemprop="url"
+    aria-label="About"
+    >About</a
+  >
+  <a
+    href="/services/"
+    itemprop="url"
+    aria-label="Services"
+    >Services</a
+  >
+  <!-- <a href="/projects/" itemprop="url" aria-label="Projects">Projects</a> -->
   <div class="nav-contact-button">
     <ContactButton />
   </div>

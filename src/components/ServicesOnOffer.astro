@@ -2,54 +2,78 @@
 import SectionWrapper from '../layouts/SectionWrapper.astro';
 ---
 
-<SectionWrapper class="services-on-offer">
+<SectionWrapper
+  class="services-on-offer"
+  itemscope
+  itemtype="http://schema.org/Service"
+>
   <div class="services-title-left">
-    <h3>SERVICES WE OFFER</h3>
+    <h3 itemprop="name">SERVICES WE OFFER</h3>
   </div>
   <div class="services-right">
-    <div class="service">
+    <div
+      class="service"
+      itemprop="hasOfferCatalog"
+      itemscope
+      itemtype="http://schema.org/OfferCatalog"
+    >
       <img
         src="/images/icon-1.svg"
-        alt="abstract icon 1"
+        alt="Website Design Icon"
       />
-      <h4>Website Design:</h4>
-      <p
-        >We craft visually stunning and user-friendly websites. Our design
+      <h4 itemprop="name">Website Design:</h4>
+      <p itemprop="description">
+        We craft visually stunning and user-friendly websites. Our design
         approach focuses on creating a seamless user experience that aligns with
         your brand identity and engages your audience.
       </p>
     </div>
-    <div class="service">
+    <div
+      class="service"
+      itemprop="hasOfferCatalog"
+      itemscope
+      itemtype="http://schema.org/OfferCatalog"
+    >
       <img
         src="/images/icon-2.svg"
-        alt="abstract icon 2"
+        alt="Website Development Icon"
       />
-      <h4>Website Development:</h4>
-      <p
-        >Beyond aesthetics, we build robust, high-functioning websites. Our
+      <h4 itemprop="name">Website Development:</h4>
+      <p itemprop="description">
+        Beyond aesthetics, we build robust, high-functioning websites. Our
         developer utilises the latest technologies to ensure your website is
         fast, secure and scalable.
       </p>
     </div>
-    <div class="service">
+    <div
+      class="service"
+      itemprop="hasOfferCatalog"
+      itemscope
+      itemtype="http://schema.org/OfferCatalog"
+    >
       <img
         src="/images/icon-3.svg"
-        alt="abstract icon 3"
+        alt="E-Commerce Solutions Icon"
       />
-      <h4>E-Commerce Solutions:</h4>
-      <p
-        >We develop e-commerce platforms that are not only visually appealing
-        but also intuitive, secure and optimised for sales conversions.
+      <h4 itemprop="name">E-Commerce Solutions:</h4>
+      <p itemprop="description">
+        We develop e-commerce platforms that are not only visually appealing but
+        also intuitive, secure and optimised for sales conversions.
       </p>
     </div>
-    <div class="service">
+    <div
+      class="service"
+      itemprop="hasOfferCatalog"
+      itemscope
+      itemtype="http://schema.org/OfferCatalog"
+    >
       <img
         src="/images/icon-4.svg"
-        alt="abstract icon 4"
+        alt="Responsive Web Design Icon"
       />
-      <h4>Responsive Web Design:</h4>
-      <p
-        >With a mobile-first approach, we ensure your website looks great and
+      <h4 itemprop="name">Responsive Web Design:</h4>
+      <p itemprop="description">
+        With a mobile-first approach, we ensure your website looks great and
         functions flawlessly across all devices, from desktop to mobile.
       </p>
     </div>

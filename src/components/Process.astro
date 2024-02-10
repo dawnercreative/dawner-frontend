@@ -2,70 +2,110 @@
 import SectionWrapper from '../layouts/SectionWrapper.astro';
 ---
 
-<SectionWrapper>
-  <section class="process-container">
-    <hr />
-    <h2>Process Overview</h2>
-    <div class="item">
-      <h4>Step 1: Initial Consultation</h4>
-      <p
-        >Our journey begins with a meeting to explore your vision and
-        objectives, aimed at fully understanding your project's core. This
-        meeting can be scheduled through Calendly, conducted over the phone, or
-        held in person, according to your preference. Bringing a brief overview
-        of your business and any design inspirations to this session would be
-        greatly beneficial. However, if you're at the outset with no prior
-        groundwork, that's perfectly fine as well.</p
-      >
-    </div>
-    <div class="item">
-      <h4>Step 2: Proposal</h4>
-      <p
-        >Based on our initial consultation, we'll provide a proposal outlining
-        the scope of work, timeline, and cost.</p
-      >
-    </div>
-    <div class="item">
-      <h4>Step 3: Design</h4>
-      <p
-        >During the design phase, we utilize the insights and inspirations
-        you've shared to begin crafting your site. We'll stay connected with you
-        throughout this journey, refining our designs to achieve your ideal
-        outcome. While having specific ideas or sources of inspiration is
-        beneficial, don't worry if you're starting from square one—we're here to
-        guide you from the ground up.</p
-      >
-    </div>
-    <div class="item">
-      <h4>Step 4: Development</h4>
-      <p
-        >This phase is the most extensive, as it's where your vision transforms
-        into a tangible, interactive reality. It involves meticulous coding,
-        integrating SEO best practices, ensuring responsive design for optimal
-        viewing on all devices, and rigorous testing for functionality and user
-        experience. Throughout this process, we'll keep you informed with
-        regular progress updates.</p
-      >
-    </div>
-    <div class="item">
-      <h4>Step 5: Launch</h4>
-      <p
-        >The launch phase marks the exciting culmination of our collaborative
-        efforts, where your website transitions from development to becoming a
-        live digital entity. This pivotal stage encompasses several critical
-        steps to ensure a smooth and successful website debut.</p
-      >
-    </div>
-    <div class="item">
-      <h4>Step 6: Ongoing Support</h4>
-      <p
-        >Our commitment to you doesn't end with the launch of your website. We
-        provide ongoing support to ensure your site remains secure, up-to-date,
-        and optimized for performance.</p
-      >
-    </div>
-    <hr />
-  </section>
+<SectionWrapper
+  class="process-container"
+  itemscope
+  itemtype="http://schema.org/HowTo"
+>
+  <meta
+    itemprop="name"
+    content="Website Development Process"
+  />
+  <meta
+    itemprop="description"
+    content="Our step-by-step process for developing a website."
+  />
+  <hr />
+  <h2 itemprop="name">Process Overview</h2>
+  <div
+    class="item"
+    itemprop="step"
+    itemscope
+    itemtype="http://schema.org/HowToStep"
+  >
+    <h4 itemprop="name">Step 1: Initial Consultation</h4>
+    <p itemprop="itemListElement">
+      Our journey begins with a meeting to explore your vision and objectives,
+      aimed at fully understanding your project's core. This meeting can be
+      scheduled through Calendly, conducted over the phone, or held in person,
+      according to your preference. Bringing a brief overview of your business
+      and any design inspirations to this session would be greatly beneficial.
+      However, if you're at the outset with no prior groundwork, that's
+      perfectly fine as well.
+    </p>
+  </div>
+  <div
+    class="item"
+    itemprop="step"
+    itemscope
+    itemtype="http://schema.org/HowToStep"
+  >
+    <h4 itemprop="name">Step 2: Proposal</h4>
+    <p itemprop="itemListElement">
+      Based on our initial consultation, we'll provide a proposal outlining the
+      scope of work, timeline, and cost.
+    </p>
+  </div>
+  <div
+    class="item"
+    itemprop="step"
+    itemscope
+    itemtype="http://schema.org/HowToStep"
+  >
+    <h4 itemprop="name">Step 3: Design</h4>
+    <p itemprop="itemListElement">
+      During the design phase, we utilize the insights and inspirations you've
+      shared to begin crafting your site. We'll stay connected with you
+      throughout this journey, refining our designs to achieve your ideal
+      outcome. While having specific ideas or sources of inspiration is
+      beneficial, don't worry if you're starting from square one—we're here to
+      guide you from the ground up.
+    </p>
+  </div>
+  <div
+    class="item"
+    itemprop="step"
+    itemscope
+    itemtype="http://schema.org/HowToStep"
+  >
+    <h4 itemprop="name">Step 4: Development</h4>
+    <p itemprop="itemListElement">
+      This phase is the most extensive, as it's where your vision transforms
+      into a tangible, interactive reality. It involves meticulous coding,
+      integrating SEO best practices, ensuring responsive design for optimal
+      viewing on all devices, and rigorous testing for functionality and user
+      experience. Throughout this process, we'll keep you informed with regular
+      progress updates.
+    </p>
+  </div>
+  <div
+    class="item"
+    itemprop="step"
+    itemscope
+    itemtype="http://schema.org/HowToStep"
+  >
+    <h4 itemprop="name">Step 5: Launch</h4>
+    <p itemprop="itemListElement">
+      The launch phase marks the exciting culmination of our collaborative
+      efforts, where your website transitions from development to becoming a
+      live digital entity. This pivotal stage encompasses several critical steps
+      to ensure a smooth and successful website debut.
+    </p>
+  </div>
+  <div
+    class="item"
+    itemprop="step"
+    itemscope
+    itemtype="http://schema.org/HowToStep"
+  >
+    <h4 itemprop="name">Step 6: Ongoing Support</h4>
+    <p itemprop="itemListElement">
+      Our commitment to you doesn't end with the launch of your website. We
+      provide ongoing support to ensure your site remains secure, up-to-date,
+      and optimized for performance.
+    </p>
+  </div>
+  <hr />
 </SectionWrapper>
 
 <style>
