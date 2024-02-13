@@ -1,36 +1,38 @@
-import { createTransport } from 'nodemailer';
 import querystring from 'querystring';
-
+const sgMail = require('@sendgrid/mail')
 
 export async function handler(event, context) {
     // Parse the form data
     const formData = querystring.parse(event.body);
 
-    let transporter = createTransport({
-        host: "smtpout.secureserver.net", // GoDaddy SMTP host
-        secure: true, // use SSL
-        port: 465, // port for secure SMTP
-        auth: {
-            user: process.env.EMAIL, // your GoDaddy email from Netlify environment variable
-            pass: process.env.EMAIL_PASSWORD // your GoDaddy email password from Netlify environment variable
-        }
-    });
+    // Set SendGrid API Key
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-    let mailOptions = {
-        from: process.env.EMAIL, // sender address
-        to: process.env.EMAIL, // list of receivers
+    // Create the email message
+    const msg = {
+        to: process.env.EMAIL, // Change to your recipient
+        from: process.env.EMAIL, // Change to your verified sender
         subject: 'New Submission', // Subject line
         text: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`, // formatted text body
     };
 
+    // Send the email
+    try {
+        await sgMail.send(msg);
+        console.log('Email sent');
+    } catch (error) {
+        console.error(error);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ message: 'Email could not be sent' }),
+        };
+    }
 
-    // send mail with defined transport object
-    await transporter.sendMail(mailOptions)
-
+    // Redirect after submission
     return {
         statusCode: 302,
         headers: {
-            Location: `${process.env.BASE_URL}/thankyou`,
+            Location: `/thankyou`,
             "Access-Control-Allow-Origin": "https://www.dawnercreative.com", // Allow CORS from your site
             "Access-Control-Allow-Headers": "Content-Type",
             'Cache-Control': 'no-cache' // Forcing browsers to always follow redirects
