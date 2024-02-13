@@ -1,6 +1,10 @@
 import { createTransport } from 'nodemailer';
+import querystring from 'querystring';
+
 
 export async function handler(event, context) {
+    // Parse the form data
+    const formData = querystring.parse(event.body);
 
     let transporter = createTransport({
         host: "smtpout.secureserver.net", // GoDaddy SMTP host
@@ -16,8 +20,9 @@ export async function handler(event, context) {
         from: process.env.EMAIL, // sender address
         to: process.env.EMAIL, // list of receivers
         subject: 'New Submission', // Subject line
-        text: JSON.stringify({ event, context }), // plain text body
+        text: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`, // formatted text body
     };
+
 
     // send mail with defined transport object
     await transporter.sendMail(mailOptions)
@@ -30,6 +35,6 @@ export async function handler(event, context) {
             "Access-Control-Allow-Headers": "Content-Type",
             'Cache-Control': 'no-cache' // Forcing browsers to always follow redirects
         },
-        body: JSON.stringify({ event, context }),
+        body: JSON.stringify({ message: 'Email sent successfully' }),
     };
 }
