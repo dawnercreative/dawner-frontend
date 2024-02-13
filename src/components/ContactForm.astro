@@ -22,38 +22,38 @@
       name="_next"
       value="http://localhost:4321/thankyou"
     />
-    <label for="name">Full Name</label>
+    <label for="name">Full Name*</label>
     <input
       type="text"
       id="name"
       name="name"
-      placeholder="Your Full Name*"
+      placeholder="Your Full Name"
       itemprop="name"
     /><br />
 
-    <label for="phone">Phone</label>
+    <label for="phone">Phone*</label>
     <input
       type="tel"
       id="phone"
       name="phone"
-      placeholder="Your Phone Number*"
+      placeholder="Your Phone Number"
       itemprop="telephone"
     /><br />
 
-    <label for="email">Email</label>
+    <label for="email">Email*</label>
     <input
       type="email"
       id="email"
       name="email"
-      placeholder="Your Email Address*"
+      placeholder="Your Email Address"
       itemprop="email"
     /><br />
 
-    <label for="message">Message</label>
+    <label for="message">Message*</label>
     <textarea
       id="message"
       name="message"
-      placeholder="Tell us about your website design and development needs*"
+      placeholder="Tell us about your website design and development needs"
       itemprop="description"
     ></textarea><br />
 
@@ -94,6 +94,10 @@
     margin-bottom: 1rem;
   }
 
+  label {
+    font-family: var(--primary-font);
+    margin-bottom: 0.5rem;
+  }
   input,
   textarea {
     box-shadow: 1px 2px 2px 2px lightgray;

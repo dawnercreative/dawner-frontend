@@ -5,6 +5,7 @@
 <div
   class="hamburger"
   id="hamburger"
+  aria-label="Toggle Navigation Menu"
 >
   <span class="line"></span>
   <span class="line"></span>
@@ -24,6 +25,26 @@
     margin-bottom: 0.6rem;
     background-color: black;
     border-radius: 0.2rem;
+  }
+
+  .line {
+    transition:
+      transofrm 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  /* Transform the first and last lines to form 'X' */
+  .hamburger.toggle .line:first-child {
+    transform: translateY(0.8rem) rotate(45deg);
+  }
+
+  .hamburger.toggle .line:last-child {
+    transform: translateY(-0.8rem) rotate(-45deg);
+  }
+
+  /* Hide the middle line */
+  .hamburger.toggle .line:nth-child(2) {
+    opacity: 0;
   }
 
   .hidden {

@@ -82,11 +82,12 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
 
 <style>
   .services-on-offer {
-    background-image: url('/images/vector6.png'), url('/images/vector5.png');
+    background-image: url('/images/vector9.png'), url('/images/vector5.png');
     background-repeat: no-repeat, no-repeat;
     background-position:
-      left,
+      left bottom,
       right top 20%;
+    background-size: 15%, 5%;
   }
   h4 {
     font-family: var(--primary-font);
@@ -117,9 +118,9 @@ import SectionWrapper from '../layouts/SectionWrapper.astro';
   @media screen and (max-width: 768px) {
     .services-on-offer {
       padding: 2rem 2rem;
-      background-image: url('/images/vector6.png');
+      background-image: url('/images/vector9.png');
       background-size: 50%;
-      background-position: top left;
+      background-position: left bottom 15%;
     }
 
     .services-title-left {
