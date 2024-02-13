@@ -3,15 +3,12 @@ import { createTransport } from 'nodemailer';
 export async function handler(event, context) {
 
     let transporter = createTransport({
-        host: "smtp-mail.outlook.com", // Microsoft Outlook host
-        secureConnection: false, // TLS requires secureConnection to be false
-        port: 587, // port for secure SMTP
-        tls: {
-            ciphers: 'SSLv3'
-        },
+        host: "smtpout.secureserver.net", // GoDaddy SMTP host
+        secure: true, // use SSL
+        port: 465, // port for secure SMTP
         auth: {
-            user: process.env.EMAIL, // your gmail account from Netlify environment variable
-            pass: process.env.EMAIL_PASSWORD // your gmail password from Netlify environment variable
+            user: process.env.EMAIL, // your GoDaddy email from Netlify environment variable
+            pass: process.env.EMAIL_PASSWORD // your GoDaddy email password from Netlify environment variable
         }
     });
 
@@ -29,6 +26,8 @@ export async function handler(event, context) {
         statusCode: 302,
         headers: {
             Location: `${process.env.BASE_URL}/thankyou`,
+            "Access-Control-Allow-Origin": "https://www.dawnercreative.com", // Allow CORS from your site
+            "Access-Control-Allow-Headers": "Content-Type",
             'Cache-Control': 'no-cache' // Forcing browsers to always follow redirects
         },
         body: JSON.stringify({ event, context }),
