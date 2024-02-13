@@ -34,8 +34,8 @@ export async function handler(event, context) {
         statusCode: 302,
         headers: {
             Location: `/thankyou`,
-            // "Access-Control-Allow-Origin": "https://www.dawnercreative.com", // Allow CORS from your site
-            // "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Origin": "*", // Allow CORS from your site
+            "Access-Control-Allow-Headers": "Content-Type",
             'Cache-Control': 'no-cache' // Forcing browsers to always follow redirects
         },
         body: JSON.stringify({ message: 'Email sent successfully' }),
