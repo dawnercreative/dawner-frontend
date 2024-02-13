@@ -3,7 +3,12 @@ import { createTransport } from 'nodemailer';
 export async function handler(event, context) {
 
     let transporter = createTransport({
-        service: 'gmail',
+        host: "smtp-mail.outlook.com", // Microsoft Outlook host
+        secureConnection: false, // TLS requires secureConnection to be false
+        port: 587, // port for secure SMTP
+        tls: {
+            ciphers: 'SSLv3'
+        },
         auth: {
             user: process.env.EMAIL, // your gmail account from Netlify environment variable
             pass: process.env.EMAIL_PASSWORD // your gmail password from Netlify environment variable
