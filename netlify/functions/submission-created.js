@@ -21,6 +21,10 @@ export async function handler(event, context) {
     try {
         await sgMail.send(msg);
         console.log('Email sent');
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Email sent' }),
+        };
     } catch (error) {
         console.error(error);
         return {
@@ -28,16 +32,4 @@ export async function handler(event, context) {
             body: JSON.stringify({ message: 'Email could not be sent' }),
         };
     }
-
-    // Redirect after submission
-    return {
-        statusCode: 302,
-        headers: {
-            Location: `/thankyou`,
-            "Access-Control-Allow-Origin": "*", // Allow CORS from your site
-            "Access-Control-Allow-Headers": "Content-Type",
-            'Cache-Control': 'no-cache' // Forcing browsers to always follow redirects
-        },
-        body: JSON.stringify({ message: 'Email sent successfully' }),
-    };
 }
