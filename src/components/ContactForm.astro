@@ -155,24 +155,20 @@
 
     // Get form data
     const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-
-    const cookie = event.headers['Cookie'] || event.headers['cookie'];
+    const text = `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nPhone: ${formData.get('phone')}\nMessage: ${formData.get('message')}`;
     // Call the submission-created function
+    console.log({ formData });
     await fetch('/.netlify/functions/submission-created', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        cookie,
-      },
-      body: new URLSearchParams(data as any).toString(),
+      // headers: {
+      //   'Content-Type': 'application/x-www-form-urlencoded',
+      // },
+      body: text,
     })
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        // Redirect to the /thankyou page
-        window.location.href = '/thankyou';
       })
       .catch((error) => {
         console.error(
