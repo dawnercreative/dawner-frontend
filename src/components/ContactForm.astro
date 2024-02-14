@@ -13,11 +13,11 @@
       name="_captcha"
       value="false"
     />
-    <!-- <input
+    <input
       type="hidden"
       name="_next"
-      value="http://localhost:4321/thankyou"
-    /> -->
+      value="/thankyou"
+    />
     <label for="name">Full Name*</label>
     <input
       type="text"
@@ -157,12 +157,8 @@
     const formData = new FormData(event.target);
     const text = `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nPhone: ${formData.get('phone')}\nMessage: ${formData.get('message')}`;
     // Call the submission-created function
-    console.log({ formData });
     await fetch('/.netlify/functions/submission-created', {
       method: 'POST',
-      // headers: {
-      //   'Content-Type': 'application/x-www-form-urlencoded',
-      // },
       body: text,
     })
       .then((response) => {
